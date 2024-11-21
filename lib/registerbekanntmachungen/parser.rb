@@ -66,8 +66,15 @@ def parse_announcement(lines)
     amtsgericht: amtsgericht,
     registernummer: registernummer,
     registerart: registerart,
-    former_amtsgericht: former_amtsgericht,
     company_name: company_name,
     company_seat: company_seat
   }
+
+  # Include 'former_amtsgericht' only if it's not nil or empty
+  unless former_amtsgericht.nil? || former_amtsgericht.strip.empty?
+    announcement[:former_amtsgericht] = former_amtsgericht
+  end
+
+  return announcement
+
 end
