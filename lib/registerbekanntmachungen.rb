@@ -1,12 +1,25 @@
 require 'watir'
 require 'webdrivers'
 require 'colorize'
-require_relative 'registerbekanntmachungen_parser'
+require 'optparse'
+require 'date'
+require 'fileutils'
+require 'json'
+require_relative 'registerbekanntmachungen/parser'
+require_relative 'registerbekanntmachungen/version'
 
 return if $0 != __FILE__
 
-opts = OptionParser.new
+# Initialize variables for command-line options
+@verbose = false
+@reload = false
+@no_save = false
+@start_date = nil
+@end_date = nil
+@all = false
 
+# Set up OptionParser
+opts = OptionParser.new do |opts|
   opts.banner = 'Usage: registerbekanntmachungen [options]'
 
   opts.on('-v', '--verbose', 'Enable verbose/debug output') do
@@ -20,6 +33,18 @@ opts = OptionParser.new
 
   opts.on('--no-save', 'Do not save any data') do
     @no_save = true
+  end
+
+  opts.on('--start-date DATE', 'Start date in format DD.MM.YYYY') do |date|
+    @start_date = date
+  end
+
+  opts.on('--end-date DATE', 'End date in format DD.MM.YYYY') do |date|
+    @end_date = date
+  end
+
+  opts.on('--all', 'Download all data from the last 8 weeks') do
+    @all = true
   end
 
   opts.on('-h', '--help', 'Displays Help') do
@@ -36,18 +61,68 @@ rescue OptionParser::InvalidOption => e
   exit(1)
 end
 
+# Determine the date range to process
+if @all
+  start_date_obj = Date.today - 7 * 8 # 8 weeks ago
+  end_date_obj = Date.today
+elsif @start_date || @end_date
+  # Use specified dates
+  start_date_obj = Date.strptime(@start_date || @end_date, '%d.%m.%Y')
+  end_date_obj = Date.strptime(@end_date || @start_date, '%d.%m.%Y')
+else
+  # Default to today
+  start_date_obj = end_date_obj = Date.today
+end
+
+# Ensure start_date_obj is not earlier than allowed (max 8 weeks ago)
+max_date = Date.today - 7 * 8
+if start_date_obj < max_date
+  start_date_obj = max_date
+end
+
+# Generate the date range
+date_range = (start_date_obj..end_date_obj).to_a
+
+# Create 'db' subfolder if it doesn't exist
+FileUtils.mkdir_p('db')
+
+# Initialize counters for statistics
+total_dates = date_range.size
+dates_downloaded = 0
+dates_skipped = 0
+total_announcements = 0
+unique_types = Hash.new(0)
+
+# Identify dates that already have cached data
+cached_dates = date_range.select do |date|
+  filename = "db/registerbekanntmachungen-#{date.strftime('%Y-%m-%d')}.json"
+  File.exist?(filename) && !@reload
+end
+
+# Adjust date range to exclude cached dates unless reloading
+dates_to_download = date_range - cached_dates
+
+# Say which dates will be downloaded
+puts "Downloading data for the following dates: #{dates_to_download.map(&:strftime).join(', ')}".green if @verbose
+
+if dates_to_download.empty? && !@reload
+  puts "All data for the specified date range is already downloaded."
+  exit
+end
+
 # Initialize the headless browser
 browser = Watir::Browser.new :chrome, options: {prefs: {'intl' => {'accept_languages' => 'DE'}}}, headless: true
 
-# Site is responsive and doesn't work if Window is too small
+# Maximize browser window to ensure all elements are accessible
 browser.window.maximize
 
 begin
+  # Navigate to the Handelsregister homepage
   puts 'Navigating to the Handelsregister homepage...' if @verbose
   browser.goto('https://www.handelsregister.de/rp_web/welcome.xhtml')
 
   # Wait for the Registerbekanntmachungen section to load
-  puts 'Waiting for the "Registerbekanntmachungen" section to load...'
+  puts 'Waiting for the "Registerbekanntmachungen" section to load...' if @verbose
   browser.wait_until { browser.a(title: 'Registerbekanntmachungen').exists? }
 
   puts 'Accessing the "Registerbekanntmachungen" section...'
@@ -57,109 +132,109 @@ begin
     link.click if link.present?
   end
 
-  # browser.a(title: 'Registerbekanntmachungen').click_no_wait
-
   # Wait for the page to load
-  puts "Waiting for the 'Registerbekanntmachungen' title to be set..."
+  puts "Waiting for the 'Registerbekanntmachungen' title to be set..." if @verbose
   browser.wait_until { browser.title.include?('Registerbekanntmachungen') }
 
   # Wait until pop-up disappears
-  puts 'Waiting for the pop-up to disappear...'
+  puts 'Waiting for the pop-up to disappear...' if @verbose
   browser.wait_until { !browser.div(text: "Ihre Anfrage wird bearbeitet").present? }
 
-  # Input the date range
-  start_date = '01.10.2024' # Format: DD.MM.YYYY
-  end_date = '31.10.2024'   # Format: DD.MM.YYYY
+  # Set the date range in the form
+  start_date_str = dates_to_download.first.strftime('%d.%m.%Y')
+  end_date_str = dates_to_download.last.strftime('%d.%m.%Y')
 
-  # start_date and end_date can be at most 8 weeks before today
-  if start_date != nil && Date.parse(start_date) < Date.today - 7 * 8
-    start_date = (Date.today - 7 * 8).strftime('%d.%m.%Y')
-  end
+  puts "Setting the date range from #{start_date_str} to #{end_date_str}..." if @verbose
+  browser.text_field(id: 'bekanntMachungenForm:datum_von_input').set(start_date_str)
+  browser.text_field(id: 'bekanntMachungenForm:datum_von_input').send_keys(:escape)
+  browser.text_field(id: 'bekanntMachungenForm:datum_bis_input').set(end_date_str)
+  browser.text_field(id: 'bekanntMachungenForm:datum_bis_input').send_keys(:escape)
 
-  if end_date != nil && Date.parse(end_date) < Date.today - 7 * 8
-    end_date = (Date.today - 7 * 8).strftime('%d.%m.%Y')
-  end
-  
-  puts "Setting the date range from #{start_date} to #{end_date}..."
-  if start_date != nil
-    browser.text_field(id: 'bekanntMachungenForm:datum_von_input').set(start_date) 
-    # Exit text field
-    browser.text_field(id: 'bekanntMachungenForm:datum_von_input').send_keys(:escape)
-  end
-  if end_date != nil
-    browser.text_field(id: 'bekanntMachungenForm:datum_bis_input').set(end_date)
-    # Exit text field
-    browser.text_field(id: 'bekanntMachungenForm:datum_bis_input').send_keys(:escape)
-  end
-
-  if start_date != nil && end_date != nil
-    puts 'Submitting the search form...'
-    browser.button(id: 'bekanntMachungenForm:rrbSuche').click
-  end
+  puts 'Submitting the search form...' if @verbose
+  browser.button(id: 'bekanntMachungenForm:rrbSuche').click
 
   # Wait until pop-up disappears
-  puts 'Waiting for the pop-up to disappear...'
+  puts 'Waiting for the pop-up to disappear...' if @verbose
   browser.wait_until { !browser.div(text: "Ihre Anfrage wird bearbeitet").present? }
 
-  # It takes a bit for the announcements to be present
-  sleep 5
-  puts 'Retrieving the announcements...'
+  # Wait for the results to load
+  sleep 5 # Adjust as necessary
 
   # Extract data from dl elements
   dl = browser.dl(id: 'bekanntMachungenForm:datalistId_list')
-  dts = dl.dts
-  dds = dl.dds
-  
-  if dts.empty?
-    puts 'No announcements found for the specified date range.'
-    return
+  if dl.exists?
+    dts = dl.dts
+    dds = dl.dds
   else
-    data = []
-    dts.each_with_index do |dt, index|
-      date = dt.text.strip
-      puts "Date: #{date}"
-      dd = dds[index]
-      announcements = dd.as
-      announcements_data = []
-  
-      announcements.each do |a|
-        label = a.label
-        text = label.text.strip
-        lines = text.split("\n").map(&:strip)
+    puts "No announcements found for the specified date range."
+    exit
+  end
 
-        announcement = parse_announcement(lines)
-        
-        announcements_data << announcement
- 
-        # Output the extracted data
-        #puts "  Type: #{type}"
-        #puts "  State: #{state}"
-        #puts "  Amtsgericht: #{amtsgericht}"
-        #puts "  Registernummer: #{registernummer}"
-        #puts "  Company Name: #{company_name}"
-        #puts "  Company Seat: #{company_seat}"
-        #puts "  ---"
-      end
-  
-      data << {
-        date: date,
-        announcements: announcements_data
-      }
+  if dts.empty?
+    puts "No announcements found for the specified date range."
+    exit
+  end
+
+  # Process the announcements grouped by date
+  data_by_date = {}
+
+  dts.each_with_index do |dt, index|
+    date_text = dt.text.strip
+    date_obj = Date.strptime(date_text, '%d.%m.%Y')
+    dd = dds[index]
+    announcements = dd.as
+    announcements_data = []
+
+    # Skip dates that are already cached unless reloading
+    if File.exist?("db/registerbekanntmachungen-#{date_obj.strftime('%Y-%m-%d')}.json") && !@reload
+      puts "Data for #{date_text} already exists, skipping." if @verbose
+      dates_skipped += 1
+      next
     end
-  
-    # Now 'data' contains all the extracted information
-    # You can use 'data' as needed
 
-    # Output the unique announcement types
-    puts "Unique announcement types:"
-    puts data.map { |d| d[:announcements].map do |a| a[:type] end }.flatten.uniq.inspect
-    puts "Registerarten:"
-    puts data.map { |d| d[:announcements].map do |a| a[:registerart] end }.flatten.uniq.inspect    
-    puts "States:"
-    puts data.map { |d| d[:announcements].map do |a| a[:state] end }.flatten.uniq.inspect
-    puts "Amtsgerichte:"
-    puts data.map { |d| d[:announcements].map do |a| a[:amtsgericht] end }.flatten.uniq.inspect
+    announcements.each do |a|
+      label = a.label
+      text = label.text.strip
+      lines = text.split("\n").map(&:strip)
 
+      announcement = parse_announcement(lines)
+
+      # Add 'date' to each announcement
+      announcement[:date] = date_text
+
+      announcements_data << announcement
+      unique_types[announcement[:type]] += 1
+      total_announcements += 1
+    end
+
+    data_by_date[date_obj] = {
+      date: date_text,
+      date_of_scrape: Date.today.strftime('%Y-%m-%d'),
+      tool_version: Registerbekanntmachungen::VERSION,
+      announcements: announcements_data
+    }
+    dates_downloaded += 1
+  end
+
+  # Save data per date
+  data_by_date.each do |date_obj, data|
+    filename = "db/registerbekanntmachungen-#{date_obj.strftime('%Y-%m-%d')}.json"
+    unless @no_save
+      File.open(filename, 'w') do |f|
+        f.write(JSON.pretty_generate(data))
+      end
+      puts "Data for date #{data[:date]} saved to #{filename}" if @verbose
+    end
+  end
+
+  # Output statistics
+  puts "Processed #{dates_downloaded} dates out of #{total_dates}."
+  puts "Skipped #{dates_skipped} dates due to existing data."
+  puts "Total announcements downloaded: #{total_announcements}"
+
+  puts "Announcement types:"
+  unique_types.each do |type, count|
+    puts "  #{type}: #{count}"
   end
 
 ensure
