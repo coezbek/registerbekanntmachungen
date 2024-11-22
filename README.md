@@ -1,35 +1,56 @@
 # Registerbekanntmachungen
 
-TODO: Delete this and the text below, and describe your gem
+> [!IMPORTANT]
+> This project is not affiliated with handelsregister.de. It is not an official source of truth. This data may be incomplete or outdated. The tool might mangle or miss entries. Use at your own risk.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/registerbekanntmachungen`. To experiment with that code, run `bin/console` for an interactive prompt.
+This Ruby Gem provides a simple scraper for the "Registerbekanntmachungen" (notices of changes in corporate directory) announced by the German Handelsregister.
 
-## Installation
+These Registerbekanntmachungen only contain officially mandated publications such as those mandated by [Handelsgesetzbuch HGB §10](https://www.gesetze-im-internet.de/hgb/__10.html). It does not contain all changes in the corporate directory, only those that are required to be published (in particular declarations to delete i.e. 'Löschungen' and 'Umwandlungen'). 
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Since the data is static once published, small (only <= 200 announcements per day) and only the last 8 weeks are available at handelregister.de, this repository also hosts daily snapshots of the data in the `db` directory.
 
-Install the gem and add to the application's Gemfile by executing:
+## Usage / Installation
 
-```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-```
-
-If bundler is not being used to manage dependencies, install the gem by executing:
+To use the gem, best clone this repository:
 
 ```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+git clone https://github.com/coezbek/registerbekanntmachungen
+cd registerbekanntmachungen
+bundle
 ```
 
-## Usage
+Run the scraper in verbose mode for announcements published today:
 
-TODO: Write usage instructions here
+```bash
+bundle exec lib/registerbekanntmachungen.rb -v
+```
 
-## Development
+*Note*: No data is published on weekends and public holidays.
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+## Data SchemaAnnouncement types
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+The data contains the following fields for each announcement:
+
+- `date`: The date the announcement was published as an ISO 8601 string, e.g. "2024-10-01".
+- `original_text`: The original link text of the announcement.
+- `court`: The court where the announcement was published, e.g. "Amtsgericht Berlin (Charlottenburg)".
+- `registernumber`: The register number of the company including the prefix (e.g. "HRB 12345" or "VR 123").
+- `registerart`: The type of the register, e.g. "HRA" for Handelsregister A or "VR" for Vereinsregister.
+- `company_name`: The name of the company, can include special characters.
+- `type`: The type of the announcement. Possible values I have observed so far:
+  - Sonderregisterbekanntmachung OHNE Bezug zum elektr. Register
+  - Löschungsankündigung
+  - Sonstige Registerbekanntmachung
+  - Registerbekanntmachung nach dem Umwandlungsgesetz
+  - Einreichung neuer Dokumente
+- `state`: The Federal State of Germany where the company is registered.
+- `company_seat`: The city where the company is registered.
+- `former_court`: In case the company registration was moved from another court, the name of the former court.
+- `details`: The text detail message shown on the handelsregister.de website.
+
+If 
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/registerbekanntmachungen.
+Bug reports and pull requests are welcome on GitHub at https://github.com/coezbek/registerbekanntmachungen.
