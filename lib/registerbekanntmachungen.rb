@@ -242,12 +242,12 @@ begin
         # Parse the announcement
         announcement_text = parse_announcement_response(response_body)
         if announcement_text.nil? || announcement_text.empty?
-          puts "WARN: Failed to extract announcement details for announcement #{index} on #{date_text}: #{text}"
+          puts "WARN: Failed to extract announcement details for announcement #{index} on #{date_text} from responsebody: #{text}"
         end
 
         announcement[:details] = announcement_text
       else
-        puts "WARN: Failed to extract announcement details for announcement #{index} on #{date_text}: #{onclick}"
+        puts "WARN: Failed to find link to click for announcement details #{index} on #{date_text}: #{onclick}"
       end
 
       announcements_data << announcement
