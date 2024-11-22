@@ -5,6 +5,7 @@ require 'optparse'
 require 'date'
 require 'fileutils'
 require 'json'
+
 require_relative 'registerbekanntmachungen/parser'
 require_relative 'registerbekanntmachungen/version'
 
@@ -17,6 +18,7 @@ return if $0 != __FILE__
 @start_date = nil
 @end_date = nil
 @all = false
+@headless = false
 
 # Set up OptionParser
 opts = OptionParser.new do |opts|
@@ -45,6 +47,10 @@ opts = OptionParser.new do |opts|
 
   opts.on('--all', 'Download all data from the last 8 weeks') do
     @all = true
+  end
+
+  opts.on('--headless', 'Run in headless mode') do
+    @headless = true
   end
 
   opts.on('-h', '--help', 'Displays Help') do
@@ -103,7 +109,8 @@ end
 dates_to_download = date_range - cached_dates
 
 # Say which dates will be downloaded
-puts "Downloading data for the following dates: #{dates_to_download.map(&:strftime).join(', ')}".green if @verbose
+# Day of week in parentheses
+puts "Downloading data for the following dates: #{dates_to_download.map { |d| d.strftime('%Y-%m-%d (%a)')}.join(', ')}".green if @verbose
 
 if dates_to_download.empty? && !@reload
   puts "All data for the specified date range is already downloaded."
@@ -111,7 +118,22 @@ if dates_to_download.empty? && !@reload
 end
 
 # Initialize the headless browser
-browser = Watir::Browser.new :chrome, options: {prefs: {'intl' => {'accept_languages' => 'DE'}}}, headless: true
+options = Selenium::WebDriver::Chrome::Options.new
+options.add_argument('--disable-gpu')
+options.add_argument('--lang=de-DE')
+options.add_argument('--window-size=1920,1080')
+options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) ' \
+                     'AppleWebKit/537.36 (KHTML, like Gecko) ' \
+                     'Chrome/95.0.4638.69 Safari/537.36')
+options.add_argument('--headless') if @headless
+
+# Set language preferences
+options.prefs = {
+  'intl.accept_languages' => 'de-DE,de'
+}
+
+# Initialize the browser
+browser = Watir::Browser.new :chrome, options: options
 
 # Maximize browser window to ensure all elements are accessible
 browser.window.maximize
@@ -166,21 +188,26 @@ begin
     dts = dl.dts
     dds = dl.dds
   else
-    puts "No announcements found for the specified date range."
-    exit
+    dts = []
   end
 
   if dts.empty?
     puts "No announcements found for the specified date range."
-    exit
   end
+
+  # Extract ViewState
+  view_state = browser.hidden(name: 'javax.faces.ViewState').value
+
+  # Get cookies
+  cookies = browser.cookies.to_a.map { |c| "#{c[:name]}=#{c[:value]}" }.join('; ')
 
   # Process the announcements grouped by date
   data_by_date = {}
 
   dts.each_with_index do |dt, index|
     date_text = dt.text.strip
-    date_obj = Date.strptime(date_text, '%d.%m.%Y')
+    date_obj = Date.strptime(date_text, '%d.%m.%Y') # Parse as German dates!
+    date_text = date_obj.strftime('%Y-%m-%d') # ISO Dates please
     dd = dds[index]
     announcements = dd.as
     announcements_data = []
@@ -192,15 +219,36 @@ begin
       next
     end
 
-    announcements.each do |a|
+    announcements.each_with_index do |a, index|
+
+      puts "Processing announcement ##{index + 1} of ##{announcements.size} for date #{date_text}..." if @verbose
       label = a.label
       text = label.text.strip
       lines = text.split("\n").map(&:strip)
 
       announcement = parse_announcement(lines)
 
-      # Add 'date' to each announcement
-      announcement[:date] = date_text
+      # Prepend 'date' to each announcement
+      announcement = { date: date_text }.merge!(announcement)
+
+      onclick = a.attribute_value('onclick')
+      if onclick =~ /fireBekanntmachung\d+\('([^']+)',\s*'([^']+)'\)/
+        datum = Regexp.last_match(1)
+        id = Regexp.last_match(2)
+        
+        # Make the POST request
+        response_body = get_detailed_announcement(datum, id, view_state, cookies)
+      
+        # Parse the announcement
+        announcement_text = parse_announcement_response(response_body)
+        if announcement_text.nil? || announcement_text.empty?
+          puts "WARN: Failed to extract announcement details for announcement #{index} on #{date_text}: #{text}"
+        end
+
+        announcement[:details] = announcement_text
+      else
+        puts "WARN: Failed to extract announcement details for announcement #{index} on #{date_text}: #{onclick}"
+      end
 
       announcements_data << announcement
       unique_types[announcement[:type]] += 1
@@ -212,6 +260,19 @@ begin
       date_of_scrape: Date.today.strftime('%Y-%m-%d'),
       tool_version: Registerbekanntmachungen::VERSION,
       announcements: announcements_data
+    }
+    dates_downloaded += 1
+  end
+
+  # Add dates with no announcements to the data
+  dates_without_announcements = date_range - data_by_date.keys
+  dates_without_announcements.each do |date_obj|
+    date_text = date_obj.strftime('%Y-%m-%d')
+    data_by_date[date_obj] = {
+      date: date_text,
+      date_of_scrape: Date.today.strftime('%Y-%m-%d'),
+      tool_version: Registerbekanntmachungen::VERSION,
+      announcements: []
     }
     dates_downloaded += 1
   end
@@ -236,6 +297,14 @@ begin
   unique_types.each do |type, count|
     puts "  #{type}: #{count}"
   end
+
+rescue Watir::Wait::TimeoutError => e
+
+  Dir.mkdir('tmp') unless File.directory?('tmp')
+  filename = File.join('tmp', "error-#{Time.now.strftime('%Y-%m-%d-%H%M%S')}.png")
+  browser.screenshot.save(filename)
+
+  raise
 
 ensure
   puts 'Closing the browser...'

@@ -1,4 +1,31 @@
 
+require 'net/http'
+require 'uri'
+require 'nokogiri'
+
+def parse_announcement_response(response_body)
+  # Parse the XML response
+  doc = Nokogiri::XML(response_body)
+
+  # Find the CDATA section containing the announcement HTML
+  cdata = doc.xpath('//update').text
+
+  # Parse the HTML content
+  html_doc = Nokogiri::HTML(cdata)
+
+  # Extract the desired text
+  # For example, get the text within specific labels or divs
+  announcement_text = html_doc.css('#rrbPanel_content').text.strip
+
+  # Remove leading/trailing whitespace
+  announcement_text = announcement_text.split("\n").map(&:strip).join("\n")
+
+  # Merge three or more consecutive newlines into two
+  announcement_text = announcement_text.gsub(/\n{3,}/, "\n\n")
+
+  announcement_text
+end
+
 def parse_announcement(lines)
   # Initialize variables
   type = ''
@@ -77,4 +104,39 @@ def parse_announcement(lines)
 
   return announcement
 
+end
+
+def get_detailed_announcement(datum, id, view_state, cookies)
+  uri = URI('https://www.handelsregister.de/rp_web/xhtml/bekanntmachungen.xhtml')
+
+  # Prepare the POST data
+  post_data = {
+    'javax.faces.partial.ajax' => 'true',
+    'javax.faces.source' => 'bekanntMachungenForm:j_idt114',
+    'javax.faces.partial.execute' => 'bekanntMachungenForm',
+    'javax.faces.partial.render' => 'bekanntMachungenForm',
+    'bekanntMachungenForm:j_idt114' => 'bekanntMachungenForm:j_idt114',
+    'datum' => datum,
+    'id' => id,
+    'bekanntMachungenForm' => 'bekanntMachungenForm',
+    'javax.faces.ViewState' => view_state
+    # Include other necessary form data if required
+  }
+
+  headers = {
+    'Cookie' => cookies,
+    'Content-Type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'Faces-Request' => 'partial/ajax',
+    'User-Agent' => 'Your User Agent'
+  }
+
+  # Create and send the POST request
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true
+  request = Net::HTTP::Post.new(uri.request_uri, headers)
+  request.set_form_data(post_data)
+  response = http.request(request)
+
+  # Parse the response
+  response.body
 end
