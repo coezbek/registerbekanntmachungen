@@ -25,7 +25,9 @@ Run the scraper in verbose mode for announcements published today:
 bundle exec lib/registerbekanntmachungen.rb -v
 ```
 
-*Note*: No data is published on weekends and public holidays.
+*Note*: 
+- No data is published on weekends and public holidays.
+- If you run this tool in the morning you might want to use it again in the evening, because new announcements are published throughout the day.
 
 ## Data SchemaAnnouncement types
 
