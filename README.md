@@ -50,8 +50,10 @@ The data contains the following fields for each announcement:
 - `former_court`: In case the company registration was moved from another court, the name of the former court.
 - `details`: The text detail message shown on the handelsregister.de website.
 
-If 
+If an announcement is of type "Sonderregisterbekanntmachung OHNE Bezug zum elektr. Register", the available fields are different:
 
+- `date`, `state`, `court`, `company_name`, `type`, `details`, `original_text` are equally available
+- Instead of `registernumber` there is a `sonderegister_referenz`, which might be a registernumber but could be something else.
 
 ## Contributing
 
