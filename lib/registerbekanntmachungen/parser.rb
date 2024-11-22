@@ -17,6 +17,11 @@ def parse_announcement_response(response_body)
   # For example, get the text within specific labels or divs
   announcement_text = html_doc.css('#rrbPanel_content').text.strip
 
+  if announcement_text.empty?
+    # Try Sonderregisterbekanntmachung
+    announcement_text = html_doc.css('#srbPanel_content').text.strip
+  end
+
   # Remove leading/trailing whitespace
   announcement_text = announcement_text.split("\n").map(&:strip).join("\n")
 
