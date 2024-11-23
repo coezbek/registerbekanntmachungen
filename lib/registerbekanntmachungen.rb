@@ -106,7 +106,7 @@ unique_types = Hash.new(0)
 
 # Identify dates that already have cached data
 cached_dates = date_range.select do |date|
-  filename = "db/registerbekanntmachungen-#{date.strftime('%Y-%m-%d')}.json"
+  filename = "db/#{date.strftime('%Y-%m')}/registerbekanntmachungen-#{date.strftime('%Y-%m-%d')}.json"
   File.exist?(filename) && !@reload
 end
 
