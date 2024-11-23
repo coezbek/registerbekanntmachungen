@@ -118,8 +118,8 @@ dates_to_download = date_range - cached_dates
 puts "Downloading data for the following dates: #{dates_to_download.map { |d| d.strftime('%Y-%m-%d (%a)')}.join(', ')}".green if @verbose
 
 if dates_to_download.empty? && !@reload
-  puts "All data for the specified date range is already downloaded."
-  exit
+  puts "All data for the specified date range is already downloaded. Use '-r' to re-download.".red
+  exit 1
 end
 
 # Initialize the headless browser
