@@ -45,8 +45,7 @@ jobs:
 
       - name: Run Scraper for yesterday
         run: |
-          mkdir -p db
-          bundle exec ruby registerbekanntmachungen.rb --headless -y
+          bundle exec ruby lib/registerbekanntmachungen.rb --headless -y
 
       - name: Commit Scraper Output
         run: |
