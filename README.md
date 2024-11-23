@@ -1,5 +1,8 @@
 # Registerbekanntmachungen
 
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Daily Scrape CI](https://github.com/coezbek/registerbekanntmachungen/actions/workflows/daily_scrape.yml/badge.svg)](./actions/workflows/daily_scrape.yml) 
+
 > [!IMPORTANT]
 > This project is not affiliated with handelsregister.de. It is not an official source of truth. This data may be incomplete or outdated. The tool might mangle or miss entries. Use at your own risk.
 
