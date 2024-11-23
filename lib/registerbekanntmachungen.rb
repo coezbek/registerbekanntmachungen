@@ -220,7 +220,7 @@ begin
     announcements_data = []
 
     # Skip dates that are already cached unless reloading
-    if File.exist?("db/registerbekanntmachungen-#{date_obj.strftime('%Y-%m-%d')}.json") && !@reload
+    if File.exist?("db/#{date_obj.strftime('%Y-%m')}/registerbekanntmachungen-#{date_obj.strftime('%Y-%m-%d')}.json") && !@reload
       puts "Data for #{date_text} already exists, skipping." if @verbose
       dates_skipped += 1
       next
