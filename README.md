@@ -6,7 +6,7 @@
 > [!IMPORTANT]
 > This project is not affiliated with handelsregister.de. It is not an official source of truth. This data may be incomplete or outdated. The tool might mangle or miss entries. Use at your own risk.
 
-This Ruby Gem provides a simple scraper for the "Registerbekanntmachungen" (notices of changes in corporate directory) announced by the German Handelsregister.
+This Ruby Gem provides a simple scraper for the "Registerbekanntmachungen" (notices of changes in corporate directory) announced by the [German Handelsregister on their page](https://www.handelsregister.de/rp_web/xhtml/bekanntmachungen.xhtml).
 
 These Registerbekanntmachungen only contain officially mandated publications such as those mandated by [Handelsgesetzbuch HGB §10](https://www.gesetze-im-internet.de/hgb/__10.html). It does not contain all changes in the corporate directory, only those that are required to be published (in particular declarations to delete i.e. 'Löschungen' and 'Umwandlungen'). 
 
@@ -29,8 +29,8 @@ bundle exec lib/registerbekanntmachungen.rb -v
 ```
 
 *Note*: 
-- No data is published on weekends and public holidays.
-- If you run this tool in the morning you might want to use it again in the evening, because new announcements are published throughout the day.
+- Data usually isn't published on weekends, but sometimes it is.
+- If you run this tool in the morning you might want to use it again in the evening and eve, because new announcements are published throughout the day.
 
 ## Data SchemaAnnouncement types
 
