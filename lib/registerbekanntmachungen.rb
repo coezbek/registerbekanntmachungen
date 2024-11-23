@@ -80,9 +80,11 @@ if @all
   start_date_obj = Date.today - 7 * 8 # 8 weeks ago
   end_date_obj = Date.today
 elsif @start_date || @end_date
-  # Use specified dates
-  start_date_obj = Date.strptime(@start_date || @end_date, '%d.%m.%Y')
-  end_date_obj = Date.strptime(@end_date || @start_date, '%d.%m.%Y')
+  # Use specified dates in dd.mm.yyyy format with fallback to yyyy-mm-dd
+  @start_date ||= @end_date
+  @end_date ||= @start_date
+  start_date_obj = (Date.strptime(@start_date, '%d.%m.%Y') rescue nil) || Date.strptime(@start_date, '%Y-%m-%d')
+  end_date_obj   = (Date.strptime(@end_date,   '%d.%m.%Y') rescue nil) || Date.strptime(@end_date,   '%Y-%m-%d')
 else
   # Default to today
   start_date_obj = end_date_obj = Date.today
