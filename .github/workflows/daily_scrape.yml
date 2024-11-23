@@ -1,4 +1,5 @@
 name: Daily Scrape
+description: Scrape yesterday's Registerbekanntmachungen daily at 4 am UTC and store to /db/ folder.
 
 on:
   workflow_dispatch:
