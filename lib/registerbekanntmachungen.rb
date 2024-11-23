@@ -262,7 +262,8 @@ begin
 
     data_by_date[date_obj] = {
       date: date_text,
-      date_of_scrape: Date.today.strftime('%Y-%m-%d'),
+      # Add date+time of scrape in JSON format, e.g. 2012-04-23T18:25:43.511Z
+      date_of_scrape: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
       tool_version: Registerbekanntmachungen::VERSION,
       announcements: announcements_data
     }
