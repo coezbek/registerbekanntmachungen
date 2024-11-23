@@ -6,8 +6,13 @@ source "https://rubygems.org"
 gemspec
 
 # Browser automation
-gem "watir"
-gem "colorize"
+gem "watir", "~> 7.3"
+gem "webdrivers", "~> 5.3"
 
+# ANSI colors
+gem "colorize", "~> 1.1"
+
+# HTML parsing
+gem "nokogiri", "~> 1.16"
 
 gem "rake", "~> 13.0"
