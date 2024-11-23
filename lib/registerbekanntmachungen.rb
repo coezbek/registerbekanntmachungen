@@ -45,6 +45,14 @@ opts = OptionParser.new do |opts|
     @end_date = date
   end
 
+  opts.on('-y', 'Download yesterday\'s data') do
+    @start_date = @end_date = (Date.today - 1).strftime('%d.%m.%Y')
+  end
+
+  opts.on('-o', 'Download oldest available data') do
+    @start_date = @end_date = (Date.today - 7 * 8).strftime('%d.%m.%Y')
+  end
+
   opts.on('--all', 'Download all data from the last 8 weeks') do
     @all = true
   end
@@ -88,9 +96,6 @@ end
 
 # Generate the date range
 date_range = (start_date_obj..end_date_obj).to_a
-
-# Create 'db' subfolder if it doesn't exist
-FileUtils.mkdir_p('db')
 
 # Initialize counters for statistics
 total_dates = date_range.size
@@ -279,12 +284,13 @@ begin
 
   # Save data per date
   data_by_date.each do |date_obj, data|
-    filename = "db/registerbekanntmachungen-#{date_obj.strftime('%Y-%m-%d')}.json"
+    filename = "db/#{date_obj.strftime('%Y-%m')}/registerbekanntmachungen-#{date_obj.strftime('%Y-%m-%d')}.json"
     unless @no_save
+      FileUtils.mkdir_p(File.dirname(filename))
       File.open(filename, 'w') do |f|
         f.write(JSON.pretty_generate(data))
       end
-      puts "Data for date #{data[:date]} saved to #{filename}" if @verbose
+      puts "Found #{data[:announcements].size} announcements for date #{data[:date]} saved to #{filename}" if @verbose
     end
   end
 
