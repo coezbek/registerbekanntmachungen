@@ -36,9 +36,27 @@ Run the scraper in verbose mode for announcements published today:
 bundle exec lib/registerbekanntmachungen.rb -v
 ```
 
+All available option:
+
+```bash
+$ bundle exec lib/registerbekanntmachungen.rb --help
+Usage: registerbekanntmachungen [options]
+    -v, --verbose                    Enable verbose/debug output
+    -r, --reload                     Reload data and skip cache
+        --no-save                    Do not save any data just print to stdout
+        --start-date DATE            Start date in format DD.MM.YYYY or YYYY-MM-DD
+        --end-date DATE              End date in format DD.MM.YYYY or YYYY-MM-DD
+    -o, --oldest                     Download oldest available data not already saved
+    -y, --yesterday                  Download yesterday's data
+    -a, --all                        Download all data from the last 8 weeks
+        --no-headless                Don't run browser in headless mode
+    -h, --help                       Displays Help
+```
+
 *Note*: 
 - Data usually isn't published on weekends, but sometimes it is.
-- If you run this tool in the morning you might want to use it again in the evening and eve, because new announcements are published throughout the day.
+- If you run this tool in the morning you might want to use it again in the evening/night, because new announcements are published throughout the day.
+- Data is only available for the last 8 weeks (7*8 = 56 days) on handelsregister.de. Use '-o' to obtain the data from the oldest available date.
 
 ## Data SchemaAnnouncement types
 
