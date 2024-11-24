@@ -18,7 +18,23 @@ return if $0 != __FILE__
 @start_date = nil
 @end_date = nil
 @all = false
-@headless = false
+@headless = true # Default to headless mode
+@oldest_mode = false
+
+# Add this method to determine the oldest unsaved date in the last 8 weeks
+def oldest_unsaved_date
+  # Calculate the range of the last 8 weeks
+  max_date = Date.today - 7 * 8
+  date_range = (max_date..(Date.today - 1)).to_a
+
+  # Find the oldest date without a JSON file
+  date_range.each do |date|
+    filename = "db/#{date.strftime('%Y-%m')}/registerbekanntmachungen-#{date.strftime('%Y-%m-%d')}.json"
+    return date unless File.exist?(filename)
+  end
+
+  nil # Return nil if all dates are already saved
+end
 
 # Set up OptionParser
 opts = OptionParser.new do |opts|
@@ -33,32 +49,37 @@ opts = OptionParser.new do |opts|
     @reload = true
   end
 
-  opts.on('--no-save', 'Do not save any data') do
+  opts.on('--no-save', 'Do not save any data just print to stdout') do
     @no_save = true
   end
 
-  opts.on('--start-date DATE', 'Start date in format DD.MM.YYYY') do |date|
+  opts.on('--start-date DATE', 'Start date in format DD.MM.YYYY or YYYY-MM-DD') do |date|
     @start_date = date
   end
 
-  opts.on('--end-date DATE', 'End date in format DD.MM.YYYY') do |date|
+  opts.on('--end-date DATE', 'End date in format DD.MM.YYYY or YYYY-MM-DD') do |date|
     @end_date = date
   end
 
-  opts.on('-y', 'Download yesterday\'s data') do
+  # Update the OptionParser block for the `-o` option
+  opts.on('-o', '--oldest', 'Download oldest available data not already saved') do
+    @oldest_mode = true
+  end
+
+  opts.on('-y', '--yesterday', 'Download yesterday\'s data') do
     @start_date = @end_date = (Date.today - 1).strftime('%d.%m.%Y')
   end
 
-  opts.on('-o', 'Download oldest available data') do
-    @start_date = @end_date = (Date.today - 7 * 8).strftime('%d.%m.%Y')
-  end
-
-  opts.on('--all', 'Download all data from the last 8 weeks') do
+  opts.on('-a', '--all', 'Download all data from the last 8 weeks') do
     @all = true
   end
 
-  opts.on('--headless', 'Run in headless mode') do
-    @headless = true
+  opts.on('--no-headless', 'Don\'t run browser in headless mode') do
+    @headless = false
+  end
+
+  opts.on('--headless', 'Run in headless mode (default)') do
+    # @headless == true is the default
   end
 
   opts.on('-h', '--help', 'Displays Help') do
@@ -73,6 +94,27 @@ begin
 rescue OptionParser::InvalidOption => e
   puts e
   exit(1)
+end
+
+if @oldest_mode && @all
+  puts 'Cannot use --oldest and --all options together.'.red
+  exit(1)
+end
+
+if @oldest_mode
+  if @start_date || @end_date
+    puts "Can't specify a date range when using '--oldest' option.".red
+    exit(1)
+  end
+  
+  oldest_date = oldest_unsaved_date
+  puts "Oldest unsaved date in the last 8 weeks: #{oldest_date.strftime('%Y-%m-%d')}" if oldest_date && @verbose
+  if oldest_date
+    @start_date = @end_date = oldest_date.strftime('%Y-%m-%d')
+  else
+    puts "No unsaved data found in the last 8 weeks.".red
+    exit(1)
+  end
 end
 
 # Determine the date range to process
@@ -267,6 +309,7 @@ begin
       # Add date+time of scrape in JSON format, e.g. 2012-04-23T18:25:43.511Z
       date_of_scrape: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
       tool_version: Registerbekanntmachungen::VERSION,
+      number_of_announcements: announcements_data.size,
       announcements: announcements_data
     }
     dates_downloaded += 1
@@ -280,6 +323,7 @@ begin
       date: date_text,
       date_of_scrape: Date.today.strftime('%Y-%m-%d'),
       tool_version: Registerbekanntmachungen::VERSION,
+      number_of_announcements: 0,
       announcements: []
     }
     dates_downloaded += 1
@@ -288,12 +332,15 @@ begin
   # Save data per date
   data_by_date.each do |date_obj, data|
     filename = "db/#{date_obj.strftime('%Y-%m')}/registerbekanntmachungen-#{date_obj.strftime('%Y-%m-%d')}.json"
-    unless @no_save
+    if @no_save
+      puts "Data for date #{data[:date]} not saved to file (no-save option enabled)." if @verbose
+      puts JSON.pretty_generate(data)
+    else
       FileUtils.mkdir_p(File.dirname(filename))
       File.open(filename, 'w') do |f|
         f.write(JSON.pretty_generate(data))
       end
-      puts "Found #{data[:announcements].size} announcements for date #{data[:date]} saved to #{filename}" if @verbose
+      puts "Found #{data[:announcements].size} announcements for date #{data[:date]} and saved to #{filename}" if @verbose
     end
   end
 

@@ -44,9 +44,9 @@ jobs:
           sudo mv chromedriver /usr/local/bin/
           sudo chmod +x /usr/local/bin/chromedriver
 
-      - name: Run Scraper for yesterday in verbose and headless mode
+      - name: Run Scraper for yesterday in verbose (and headless mode)
         run: |
-          bundle exec ruby lib/registerbekanntmachungen.rb --headless -y -v
+          bundle exec ruby lib/registerbekanntmachungen.rb -y -v
 
       - name: Commit Scraper Output
         run: |
