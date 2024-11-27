@@ -188,28 +188,42 @@ browser = Watir::Browser.new :chrome, options: options
 browser.window.maximize
 
 begin
-  # Navigate to the Handelsregister homepage
-  puts 'Navigating to the Handelsregister homepage...' if @verbose
-  browser.goto('https://www.handelsregister.de/rp_web/welcome.xhtml')
 
-  # Wait for the Registerbekanntmachungen section to load
-  puts 'Waiting for the "Registerbekanntmachungen" section to load...' if @verbose
-  browser.wait_until { browser.a(title: 'Registerbekanntmachungen').exists? }
+  navigation_mode = :direct # :from_homepage
 
-  puts 'Accessing the "Registerbekanntmachungen" section...'
-  browser.as(title: 'Registerbekanntmachungen').each_with_index do |link, index|
-    puts "Link ##{index + 1}: Title: #{link.title}, Href: #{link.href}, Present? #{link.present?}"
+  case navigation_mode 
+  when :from_homepage
 
-    link.click if link.present?
+    # Navigate to the Handelsregister homepage
+    puts 'Navigating to the Handelsregister homepage...' if @verbose
+    browser.goto('https://www.handelsregister.de/rp_web/welcome.xhtml')
+
+    # Wait for the Registerbekanntmachungen section to load
+    puts 'Waiting for the "Registerbekanntmachungen" section to load...' if @verbose
+    browser.wait_until { browser.a(title: 'Registerbekanntmachungen').exists? }
+
+    puts 'Accessing the "Registerbekanntmachungen" section...'
+    browser.as(title: 'Registerbekanntmachungen').each_with_index do |link, index|
+      # puts "Link ##{index + 1}: Title: #{link.title}, Href: #{link.href}, Present? #{link.present?}"
+
+      link.click if link.present?
+    end
+
+    # Wait for the page to load
+    puts "Waiting for the 'Registerbekanntmachungen' title to be set..." if @verbose
+    browser.wait_until { browser.title.include?('Registerbekanntmachungen') }
+
+    # Wait until pop-up disappears
+    puts 'Waiting for the pop-up to disappear...' if @verbose
+    browser.wait_until { !browser.div(text: "Ihre Anfrage wird bearbeitet").present? }
+  
+  when :direct
+    # Navigate to the Handelsregister homepage
+    puts 'Navigating to the Bekanntmachungen page...' if @verbose
+    browser.goto('https://www.handelsregister.de/rp_web/xhtml/bekanntmachungen.xhtml')
+  else
+    raise "Invalid navigation mode: #{navigation_mode}"
   end
-
-  # Wait for the page to load
-  puts "Waiting for the 'Registerbekanntmachungen' title to be set..." if @verbose
-  browser.wait_until { browser.title.include?('Registerbekanntmachungen') }
-
-  # Wait until pop-up disappears
-  puts 'Waiting for the pop-up to disappear...' if @verbose
-  browser.wait_until { !browser.div(text: "Ihre Anfrage wird bearbeitet").present? }
 
   # Set the date range in the form
   start_date_str = dates_to_download.first.strftime('%d.%m.%Y')
