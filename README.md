@@ -47,8 +47,9 @@ Usage: registerbekanntmachungen [options]
         --start-date DATE            Start date in format DD.MM.YYYY or YYYY-MM-DD
         --end-date DATE              End date in format DD.MM.YYYY or YYYY-MM-DD
     -o, --oldest                     Download oldest available data not already saved
-    -y, --yesterday                  Download yesterday's data
+    -y, --yesterday                  Download yesterday's data    
     -a, --all                        Download all data from the last 8 weeks
+    -m, --merge                      Merge new data with existing data
         --no-headless                Don't run browser in headless mode
     -h, --help                       Displays Help
 ```
@@ -57,12 +58,14 @@ Usage: registerbekanntmachungen [options]
 - Data usually isn't published on weekends, but sometimes it is.
 - If you run this tool in the morning you might want to use it again in the evening/night, because new announcements are published throughout the day.
 - Data is only available for the last 8 weeks (7*8 = 56 days) on handelsregister.de. Use '-o' to obtain the data from the oldest available date.
+- There might be multiple announcements for the same company and announcement type on the same day. The `detail` text might differ.
 
 ## Data SchemaAnnouncement types
 
 The data contains the following fields for each announcement:
 
 - `date`: The date the announcement was published as an ISO 8601 string, e.g. "2024-10-01".
+- `id`: A (hopefully) unique identifier for the announcement provided by Handelsregister.de. As this an implementation detail of the website, there is no guarantee that this is unique and or continuous. 
 - `original_text`: The original link text of the announcement.
 - `court`: The court where the announcement was published, e.g. "Amtsgericht Berlin (Charlottenburg)".
 - `registernumber`: The register number of the company including the prefix (e.g. "HRB 12345" or "VR 123").
