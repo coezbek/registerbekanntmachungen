@@ -148,6 +148,7 @@ end
 # Ensure start_date_obj is not earlier than allowed (max 8 weeks ago)
 max_date = Date.today - 7 * 8
 if start_date_obj < max_date
+  puts "Start date #{start_date_obj} is earlier than the earliest allowed date #{max_date}, adjusting.".red
   start_date_obj = max_date
 end
 
@@ -294,7 +295,7 @@ begin
       next
     end
 
-    existing_data = { 'announcements': [] }
+    existing_data = { 'announcements' => [] }
     if @merge && File.exist?(file_name(date_obj))
       # Load existing data
       existing_data = JSON.parse(File.read(file_name(date_obj)))
@@ -328,9 +329,6 @@ begin
         announcement[:details] = existing_announcements.first['details']
         
       else
-
-        puts existing_announcements.inspect
-        puts announcement.inspect
 
         onclick = a.attribute_value('onclick')
         if onclick =~ /fireBekanntmachung\d+\('([^']+)',\s*'([^']+)'\)/
