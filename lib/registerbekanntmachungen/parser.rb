@@ -31,7 +31,19 @@ def parse_announcement_response(response_body)
   announcement_text
 end
 
-def parse_announcement(lines)
+#
+# Parse the announcement details from the given text lines and onclick attribute
+#
+# <a id="bekanntMachungenForm:datalistId:0:j_idt116:2:j_idt117" href="#" class="ui-commandlink ui-widget"
+# onclick="fireBekanntmachung2('Sat Nov 30 00:00:00 CET 2024', '95064');;PrimeFaces.ab({s:&quot;bekanntMachungenForm:datalistId:0:j_idt116:2:j_idt117&quot;,f:&quot;bekanntMachungenForm&quot;});return false;">
+#   <label id="bekanntMachungenForm:datalistId:0:j_idt116:2:j_idt118" class="ui-outputlabel ui-widget"> 
+#     Cancellation announcement under the Transformation Act <br> 
+#     Bavaria District court Regensburg HRB 16226 <br> 
+#     Bachner Holding GmbH – Mainburg
+#   </label>
+# </a>
+#
+def parse_announcement(lines, onclick)
   # Initialize variables
   type = ''
   state = ''
@@ -40,6 +52,17 @@ def parse_announcement(lines)
   company_name = ''
   company_seat = ''
   former_amtsgericht = ''
+  id = ''
+
+  # Extract ID from the onclick attribute
+  # fireBekanntmachung2('Sat Nov 30 00:00:00 CET 2024', '95064');
+  match = onclick.match(/fireBekanntmachung\d+\('[^']*',\s*'(?<id>\d+)'\);/)
+  if match
+    id = match[:id]
+  else
+    puts "Failed to extract ID from the onclick attribute: #{onclick}" if @verbose
+    # raise "Failed to extract ID from the onclick attribute: #{onclick}"
+  end
 
   # Extract Type from the first line
   type = lines[0]
@@ -64,6 +87,7 @@ def parse_announcement(lines)
     company_name = lines[3]
 
     return {
+      id: id,
       original_text: lines.join("\n"),
       type: type,
       state: state,
@@ -92,6 +116,7 @@ def parse_announcement(lines)
   company_seat = company_parts[1]
 
   announcement = {
+    id: id,
     original_text: lines.join("\n"),
     type: type,
     state: state,

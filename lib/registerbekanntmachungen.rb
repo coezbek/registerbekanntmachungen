@@ -20,6 +20,7 @@ return if $0 != __FILE__
 @all = false
 @headless = true # Default to headless mode
 @oldest_mode = false
+@merge = false
 
 # Add this method to determine the oldest unsaved date in the last 8 weeks
 def oldest_unsaved_date
@@ -34,6 +35,10 @@ def oldest_unsaved_date
   end
 
   nil # Return nil if all dates are already saved
+end
+
+def file_name(date)
+  "db/#{date.strftime('%Y-%m')}/registerbekanntmachungen-#{date.strftime('%Y-%m-%d')}.json"
 end
 
 # Set up OptionParser
@@ -74,6 +79,10 @@ opts = OptionParser.new do |opts|
     @all = true
   end
 
+  opts.on('-m', '--merge', 'Merge new data with existing data') do
+    @merge = true
+  end
+
   opts.on('--no-headless', 'Don\'t run browser in headless mode') do
     @headless = false
   end
@@ -99,6 +108,10 @@ end
 if @oldest_mode && @all
   puts 'Cannot use --oldest and --all options together.'.red
   exit(1)
+end
+
+if @merge
+  @reload = true # Ensure data is reloaded/overriden when merging
 end
 
 if @oldest_mode
@@ -150,8 +163,7 @@ unique_types = Hash.new(0)
 
 # Identify dates that already have cached data
 cached_dates = date_range.select do |date|
-  filename = "db/#{date.strftime('%Y-%m')}/registerbekanntmachungen-#{date.strftime('%Y-%m-%d')}.json"
-  File.exist?(filename) && !@reload
+  File.exist?(file_name(date)) && !@reload
 end
 
 # Adjust date range to exclude cached dates unless reloading
@@ -276,46 +288,73 @@ begin
     announcements_data = []
 
     # Skip dates that are already cached unless reloading
-    if File.exist?("db/#{date_obj.strftime('%Y-%m')}/registerbekanntmachungen-#{date_obj.strftime('%Y-%m-%d')}.json") && !@reload
+    if File.exist?(file_name(date_obj)) && !@reload
       puts "Data for #{date_text} already exists, skipping." if @verbose
       dates_skipped += 1
       next
+    end
+
+    existing_data = { 'announcements': [] }
+    if @merge && File.exist?(file_name(date_obj))
+      # Load existing data
+      existing_data = JSON.parse(File.read(file_name(date_obj)))
+
+      puts "Merging with #{existing_data['announcements'].size} existing announcements for date #{date_text}..." if @verbose
     end
 
     announcements.each_with_index do |a, index|
 
       puts "Processing announcement ##{index + 1} of ##{announcements.size} for date #{date_text}..." if @verbose
       label = a.label
+      onclick = a.attribute_value('onclick')
       text = label.text.strip
       lines = text.split("\n").map(&:strip)
 
-      announcement = parse_announcement(lines)
+      announcement = parse_announcement(lines, onclick)
 
       # Prepend 'date' to each announcement
       announcement = { date: date_text }.merge!(announcement)
 
-      onclick = a.attribute_value('onclick')
-      if onclick =~ /fireBekanntmachung\d+\('([^']+)',\s*'([^']+)'\)/
-        datum = Regexp.last_match(1)
-        id = Regexp.last_match(2)
-        
-        # Make the POST request
-        response_body = get_detailed_announcement(datum, id, view_state, cookies)
-      
-        # Parse the announcement
-        announcement_text = parse_announcement_response(response_body)
-        if announcement_text.nil? || announcement_text.empty?
-          puts "WARN: Failed to extract announcement details for announcement #{index} on #{date_text} from responsebody: #{text}"
-        end
+      # Check if this announcement is already in the existing data
+      existing_announcements = existing_data['announcements'].select { |e|
+        (e['id'] == nil || e['id'] == announcement[:id]) &&
+        e['type'] == announcement[:type] && 
+        e['amtsgericht'] == announcement[:amtsgericht] && 
+        e['registernummer'] == announcement[:registernummer]
+      }
 
-        announcement[:details] = announcement_text
+      if @merge && existing_announcements.size == 1
+
+        announcement[:details] = existing_announcements.first['details']
+        
       else
-        puts "WARN: Failed to find link to click for announcement details #{index} on #{date_text}: #{onclick}"
+
+        puts existing_announcements.inspect
+        puts announcement.inspect
+
+        onclick = a.attribute_value('onclick')
+        if onclick =~ /fireBekanntmachung\d+\('([^']+)',\s*'([^']+)'\)/
+          datum = Regexp.last_match(1)
+          id = Regexp.last_match(2)
+          
+          # Make the POST request
+          response_body = get_detailed_announcement(datum, id, view_state, cookies)
+        
+          # Parse the announcement
+          announcement_text = parse_announcement_response(response_body)
+          if announcement_text.nil? || announcement_text.empty?
+            puts "WARN: Failed to extract announcement details for announcement #{index} on #{date_text} from responsebody: #{text}"
+          end
+
+          announcement[:details] = announcement_text
+          total_announcements += 1
+        else
+          puts "WARN: Failed to find link to click for announcement details #{index} on #{date_text}: #{onclick}"
+        end
       end
 
       announcements_data << announcement
-      unique_types[announcement[:type]] += 1
-      total_announcements += 1
+      unique_types[announcement[:type]] += 1      
     end
 
     data_by_date[date_obj] = {
@@ -324,7 +363,7 @@ begin
       date_of_scrape: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
       tool_version: Registerbekanntmachungen::VERSION,
       number_of_announcements: announcements_data.size,
-      announcements: announcements_data
+      announcements: announcements_data.sort_by { |a| a[:id] }
     }
     dates_downloaded += 1
   end
@@ -361,7 +400,7 @@ begin
   # Output statistics
   puts "Processed #{dates_downloaded} dates out of #{total_dates}."
   puts "Skipped #{dates_skipped} dates due to existing data."
-  puts "Total announcements downloaded: #{total_announcements}"
+  puts "Total announcements newly downloaded: #{total_announcements}"
 
   puts "Announcement types:"
   unique_types.each do |type, count|
