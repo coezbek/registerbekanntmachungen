@@ -1,0 +1,55 @@
+name: Daily Scrape
+description: Scrape yesterday's Registerbekanntmachungen daily at 4 am UTC and store to /db/ folder.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write  # Allow push access to the repository
+
+jobs:
+  scrape-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+          bundler-cache: true
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libnss3 libgconf-2-4 wget unzip
+          gem install bundler
+          bundle install
+
+      - name: Install Chrome
+        run: |
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt install -y ./google-chrome-stable_current_amd64.deb
+
+      - name: Install ChromeDriver
+        run: |
+          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+\.\d+')
+          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE")
+          wget "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin/
+          sudo chmod +x /usr/local/bin/chromedriver
+
+      - name: Run Scraper for oldest data in verbose (and headless mode)
+        run: |
+          bundle exec ruby lib/registerbekanntmachungen.rb -o -v
+
+      - name: Commit Scraper Output
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add db/
+          git commit -m "Automated update: Scraper results for for oldest missing date"
+          git push
