@@ -1,5 +1,5 @@
-name: Daily Scrape
-description: Scrape yesterday's Registerbekanntmachungen daily at 4 am UTC and store to /db/ folder.
+name: Scrape oldest missing data
+description: Scrape the oldest Registerbekanntmachungen and store to /db/ folder.
 
 on:
   workflow_dispatch:
