@@ -1,11 +1,12 @@
 {
   "date": "2024-10-05",
-  "date_of_scrape": "2024-11-24T15:12:46.559Z",
-  "tool_version": "0.1.0",
+  "date_of_scrape": "2024-11-30T12:28:11.217Z",
+  "tool_version": "0.2.0",
   "number_of_announcements": 21,
   "announcements": [
     {
       "date": "2024-10-05",
+      "id": "89272",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht Kempten (Allgäu) HRA 9884\nBürgerwind Ruderatshofen GmbH & Co. KG – Marktoberdorf",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -18,6 +19,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89283",
       "original_text": "Einreichung neuer Dokumente\nBayern Amtsgericht Nürnberg HRB 35802\nCurameo AG – Reichenschwand",
       "type": "Einreichung neuer Dokumente",
       "state": "Bayern",
@@ -30,6 +32,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89287",
       "original_text": "Löschungsankündigung\nRheinland-Pfalz Amtsgericht Kaiserslautern HRB 33110\nDK Bauservice GmbH – Göllheim",
       "type": "Löschungsankündigung",
       "state": "Rheinland-Pfalz",
@@ -42,6 +45,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89286",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 226845\nDeTech Solution GmbH – Erding",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -54,6 +58,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89285",
       "original_text": "Einreichung neuer Dokumente\nBayern Amtsgericht München HRB 216106\nEDAG Engineering Holding GmbH – München",
       "type": "Einreichung neuer Dokumente",
       "state": "Bayern",
@@ -66,6 +71,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89269",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Würzburg HRA 8864\nErfrischungs-Service-Kus e. K. – Kitzingen",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -78,6 +84,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89268",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht Ansbach HRA 2303\nFachfirma Dürr Turmuhren - Glocken - Läutemaschinen GmbH & Co. KG – Rothenburg ob der Tauber",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -90,6 +97,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89276",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Augsburg HRB 39669\nH&F Teleservice GmbH – Augsburg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -102,6 +110,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89273",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 202185\nH.F.S. Immobilienfonds Deutschland 4 Komplementär GmbH – München",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -114,6 +123,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89277",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Augsburg HRA 21592\nHadasch O2-Partnershop e.K. – Augsburg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -126,6 +136,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89270",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Würzburg HRB 16049\nKuS Kälte und Service GmbH – Kitzingen",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -138,6 +149,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89278",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Fürth HRB 20511\nKöstner Fachzentrum GmbH – Neustadt a.d. Aisch",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -150,6 +162,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89280",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 278481\nLiterArte Verlags- und Werbeagentur GmbH – München",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -162,6 +175,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89284",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht Ansbach HRA 3912\nMack Maler und Stuckateure KG – Dinkelsbühl",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -174,6 +188,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89281",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 282603\nPNZ A23 Beteiligungs GmbH – München",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -186,6 +201,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89282",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 282603\nPNZ A23 Beteiligungs GmbH – München",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -198,6 +214,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89267",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 179622\nPrestele Group Services GmbH – Gräfelfing",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -210,6 +227,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89279",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Fürth HRB 20091\nSchultheiß Software AG – Erlangen",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -222,6 +240,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89274",
       "original_text": "Einreichung neuer Dokumente\nBayern Amtsgericht München HRB 109326\nTÜV SÜD Aktiengesellschaft – München",
       "type": "Einreichung neuer Dokumente",
       "state": "Bayern",
@@ -234,6 +253,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89275",
       "original_text": "Einreichung neuer Dokumente\nBayern Amtsgericht München HRB 275610\nVIRIDIS - GREEN-TECH INVESTMENT AG – München",
       "type": "Einreichung neuer Dokumente",
       "state": "Bayern",
@@ -246,6 +266,7 @@
     },
     {
       "date": "2024-10-05",
+      "id": "89271",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRA 110047\nlight2square solutions GmbH & Co. KG – München",
       "type": "Löschungsankündigung",
       "state": "Bayern",

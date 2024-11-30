@@ -1,11 +1,12 @@
 {
   "date": "2024-10-12",
-  "date_of_scrape": "2024-11-26T21:46:41.619Z",
-  "tool_version": "0.1.0",
+  "date_of_scrape": "2024-11-30T12:24:37.745Z",
+  "tool_version": "0.2.0",
   "number_of_announcements": 18,
   "announcements": [
     {
       "date": "2024-10-12",
+      "id": "90179",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 199822\nAsphaltbau München GmbH – München",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -18,6 +19,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90182",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 226580\nAutoMaster München UG (haftungsbeschränkt) – München",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -30,6 +32,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90181",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 147527\nAyiko Europe GmbH – München",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -42,6 +45,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90177",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 294529\nBrainground GmbH – München",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -54,6 +58,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90176",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Nürnberg HRB 27179\nCosmo Consult GmbH – Nürnberg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -66,6 +71,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90173",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Augsburg HRB 22397\nFoodstaffing GmbH – Augsburg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -78,6 +84,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90174",
       "original_text": "Sonstige Registerbekanntmachung\nBayern Amtsgericht Augsburg HRB 22397\nFoodstaffing GmbH – Augsburg",
       "type": "Sonstige Registerbekanntmachung",
       "state": "Bayern",
@@ -90,6 +97,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90185",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht Coburg HRB 2808\nInnotech Sondermaschinen und Vorrichtungen GmbH – Hochstadt OT Wolfsloch",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -102,6 +110,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90180",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 248091\nLifeFit Group TopCo GmbH – München",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -114,6 +123,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90178",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Regensburg HRB 15466\nMäusl GmbH – Pentling",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -126,6 +136,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90183",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Augsburg HRB 27248\nOrizon GmbH – Augsburg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -138,6 +149,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90186",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Schweinfurt HRA 10622\nPelzer GmbH & Co. KG – Schweinfurt",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -150,6 +162,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90175",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht Regensburg HRB 16032\nRW Gastro Verwaltungs UG (haftungsbeschränkt) – Regensburg",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -162,6 +175,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90188",
       "original_text": "Löschungsankündigung\nBrandenburg Amtsgericht Potsdam HRB 24790\nRailserv UG (haftungsbeschränkt) – Blankenfelde-Mahlow",
       "type": "Löschungsankündigung",
       "state": "Brandenburg",
@@ -174,6 +188,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90187",
       "original_text": "Einreichung neuer Dokumente\nBayern Amtsgericht München HRB 247027\nSeccua Holding AG – Weilheim",
       "type": "Einreichung neuer Dokumente",
       "state": "Bayern",
@@ -186,6 +201,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90184",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 289565\nTechanics GmbH – Gmund a.Tegernsee",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -198,6 +214,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90190",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBrandenburg Amtsgericht Potsdam HRB 37598\ne-cars24 UG (haftungsbeschränkt) – Brandenburg an der Havel",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Brandenburg",
@@ -210,6 +227,7 @@
     },
     {
       "date": "2024-10-12",
+      "id": "90189",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBrandenburg Amtsgericht Potsdam HRA 8517\ne-cars24 e.K. – Brandenburg an der Havel",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Brandenburg",

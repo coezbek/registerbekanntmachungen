@@ -1,10 +1,12 @@
 {
   "date": "2024-11-23",
-  "date_of_scrape": "2024-11-24T04:04:16.998Z",
-  "tool_version": "0.1.0",
+  "date_of_scrape": "2024-11-30T13:08:48.158Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 19,
   "announcements": [
     {
       "date": "2024-11-23",
+      "id": "94440",
       "original_text": "Einreichung neuer Dokumente\nBayern Amtsgericht Ingolstadt HRB 9560\nALDI Oberbayern Verwaltungs-SE – Geisenfeld",
       "type": "Einreichung neuer Dokumente",
       "state": "Bayern",
@@ -17,6 +19,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94428",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht Ingolstadt HRB 4680\nBC-MONT GmbH – Manching",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -29,6 +32,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94426",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Fürth HRB 7677\nBRODOS AG – Baiersdorf",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -41,6 +45,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94431",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 140065\nDMG Beteiligungs GmbH – Münsing",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -53,6 +58,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94424",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Deggendorf HRB 4594\nHSN Verwaltungs GmbH – Deggendorf",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -65,6 +71,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94430",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Fürth HRB 14250\nInterSolTec GmbH – Bad Windsheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -77,6 +84,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94436",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 241168\nInternational Trading GmbH – München",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -89,6 +97,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94429",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 296971\nM&C One GmbH – Grünwald",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -101,6 +110,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94439",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 43333\nRENA Maschinen- und Anlagenbau GmbH – Geretsried",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -113,6 +123,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94434",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Fürth HRB 14257\nROFRA Elektro - Energietechnik GmbH – Bad Windsheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -125,6 +136,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94432",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Deggendorf HRB 4915\nRSD Grundstücks GmbH – Deggendorf",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -137,6 +149,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94435",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 259871\nSHOWERTEC Trading GmbH – München",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -149,6 +162,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94425",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Weiden i. d. OPf. HRB 5824\nSPUR Technik GmbH – Weiden i.d.OPf.",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -161,6 +175,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94438",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 209510\nSiemens Advanta Solutions GmbH – München",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -173,6 +188,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94433",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 197885\nSixt International Services GmbH – Pullach i. Isartal",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -185,6 +201,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94427",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Fürth GsR 231\nVolker und Steffen Koch eGbR – Herzogenaurach",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -197,6 +214,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94422",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht München HRB 244390\nWealthcap Objekt-Vorrat 25 Komplementär GmbH – München",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -209,6 +227,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94437",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Nürnberg HRB 43778\nZollhof Betreiber GmbH – Nürnberg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -221,6 +240,7 @@
     },
     {
       "date": "2024-11-23",
+      "id": "94423",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Nürnberg HRB 33400\nZollhof Holding GmbH – Nürnberg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",

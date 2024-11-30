@@ -1,11 +1,12 @@
 {
   "date": "2024-11-25",
-  "date_of_scrape": "2024-11-26T04:07:39.269Z",
-  "tool_version": "0.1.0",
+  "date_of_scrape": "2024-11-30T13:08:46.162Z",
+  "tool_version": "0.2.0",
   "number_of_announcements": 111,
   "announcements": [
     {
       "date": "2024-11-25",
+      "id": "94546",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nHessen Amtsgericht Wiesbaden HRB 24224\n\"Dieter Frohnapfel Unternehmens- u. DV-Beratung GmbH\" – Wiesbaden",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Hessen",
@@ -18,6 +19,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94482",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Stuttgart HRB 729059\nALPHA Premium GmbH – Leinfelden-Echterdingen",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -30,6 +32,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94473",
       "original_text": "Löschungsankündigung\nSchleswig-Holstein Amtsgericht Kiel HRA 5528\nAgro Handel GmbH & Co. KG – Nortorf",
       "type": "Löschungsankündigung",
       "state": "Schleswig-Holstein",
@@ -42,6 +45,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94481",
       "original_text": "Löschungsankündigung\nSachsen-Anhalt Amtsgericht Stendal GnR 1892\nAgrochemisches Zentrum Lindau i.L. – Lindau",
       "type": "Löschungsankündigung",
       "state": "Sachsen-Anhalt",
@@ -54,6 +58,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94552",
       "original_text": "Löschungsankündigung\nHessen Amtsgericht Frankfurt am Main HRB 94464\nAirfreight Network Services Gesellschaft mit beschränkter Haftung – Kriftel",
       "type": "Löschungsankündigung",
       "state": "Hessen",
@@ -66,6 +71,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94529",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Duisburg HRA 13537\nAndré Netzler e.K. – Mülheim an der Ruhr",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -78,6 +84,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94489",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nMecklenburg-Vorpommern Amtsgericht Schwerin HRA 4639\nAnke Kniephoff-Schütt e.K. – Wismar",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Mecklenburg-Vorpommern",
@@ -90,6 +97,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94499",
       "original_text": "Einreichung neuer Dokumente\nHamburg Amtsgericht Hamburg HRB 186826\nAntares Management SE – Hamburg",
       "type": "Einreichung neuer Dokumente",
       "state": "Hamburg",
@@ -102,6 +110,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94445",
       "original_text": "Einreichung neuer Dokumente\nBaden-Württemberg Amtsgericht Mannheim HRB 737166\nAudiotainment Südwest Verwaltungs-GmbH – Mannheim",
       "type": "Einreichung neuer Dokumente",
       "state": "Baden-Württemberg",
@@ -114,6 +123,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94493",
       "original_text": "Löschungsankündigung\nSchleswig-Holstein Amtsgericht Flensburg HRB 3287\nAutoland Harrislee GmbH – Harrislee",
       "type": "Löschungsankündigung",
       "state": "Schleswig-Holstein",
@@ -126,6 +136,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94543",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Bochum HRB 14746\nBENTO Performance GmbH – Bochum",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -138,6 +149,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94553",
       "original_text": "Löschungsankündigung\nHessen Amtsgericht Frankfurt am Main HRB 108033\nBUZZER international GmbH – Frankfurt am Main",
       "type": "Löschungsankündigung",
       "state": "Hessen",
@@ -150,6 +162,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94535",
       "original_text": "Einreichung neuer Dokumente\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 3871\nBarmenia Versicherungen a.G. – Wuppertal",
       "type": "Einreichung neuer Dokumente",
       "state": "Nordrhein-Westfalen",
@@ -162,6 +175,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94479",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Stuttgart HRB 796591\nBerger Group GmbH – Korntal-Münchingen",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -174,6 +188,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94550",
       "original_text": "Löschungsankündigung\nHessen Amtsgericht Offenbach am Main VR 573\nBiochemischer Gesundheitsverein Offenbach am Main – Offenbach am Main",
       "type": "Löschungsankündigung",
       "state": "Hessen",
@@ -186,6 +201,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94475",
       "original_text": "Löschungsankündigung\nThüringen Amtsgericht Jena HRB 110891\nCCC Customer Care Center Gesellschaft mit beschränkter Haftung – Erfurt",
       "type": "Löschungsankündigung",
       "state": "Thüringen",
@@ -198,6 +214,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94548",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nHessen Amtsgericht Frankfurt am Main HRB 88649\nCOPiTOS ACADEMY GmbH – Frankfurt am Main",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Hessen",
@@ -210,6 +227,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94504",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nSachsen Amtsgericht Dresden HRB 16640\nCREAVAC-Creative Vakuumbeschichtung GmbH – Dresden",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Sachsen",
@@ -222,6 +240,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94542",
       "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Krefeld HRB 16931\nCS Combustion Solutions GmbH – Grefrath",
       "type": "Löschungsankündigung",
       "state": "Nordrhein-Westfalen",
@@ -234,6 +253,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94485",
       "original_text": "Löschungsankündigung\nBerlin Amtsgericht Berlin (Charlottenburg) HRB 170868\nClayallee FAS Service GmbH – Berlin",
       "type": "Löschungsankündigung",
       "state": "Berlin",
@@ -246,6 +266,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94510",
       "original_text": "Einreichung neuer Dokumente\nNiedersachsen Amtsgericht Hannover HRB 52030\nContiTech Antriebssysteme GmbH – Hannover",
       "type": "Einreichung neuer Dokumente",
       "state": "Niedersachsen",
@@ -258,6 +279,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94490",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Stuttgart HRB 758721\nDATAGROUP SE – Pliezhausen",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -270,6 +292,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94502",
       "original_text": "Löschungsankündigung\nSachsen Amtsgericht Chemnitz HRB 36036\nDE Ewigkeit Progress International GmbH – Chemnitz",
       "type": "Löschungsankündigung",
       "state": "Sachsen",
@@ -282,6 +305,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94486",
       "original_text": "Löschungsankündigung\nBerlin Amtsgericht Berlin (Charlottenburg) HRB 155765\nDIV Deutsche Insolvenzverwertung GmbH – Berlin",
       "type": "Löschungsankündigung",
       "state": "Berlin",
@@ -294,6 +318,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94458",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nHamburg Amtsgericht Hamburg HRB 152868\nDROEGE HOLDING GmbH – Hamburg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Hamburg",
@@ -306,6 +331,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94526",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Düsseldorf HRA 27983\nDigitalberatung.NRW e.K. – Düsseldorf",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -318,6 +344,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94540",
       "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Arnsberg HRB 11767\nDiklea GmbH – Werl",
       "type": "Löschungsankündigung",
       "state": "Nordrhein-Westfalen",
@@ -330,6 +357,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94512",
       "original_text": "Löschungsankündigung\nNiedersachsen Amtsgericht Osnabrück HRB 205162\nEnTeThe GmbH – Bad Essen",
       "type": "Löschungsankündigung",
       "state": "Niedersachsen",
@@ -342,6 +370,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94494",
       "original_text": "Einreichung neuer Dokumente\nHamburg Amtsgericht Hamburg HRB 162517\nF&P Executive Solutions AG – Hamburg",
       "type": "Einreichung neuer Dokumente",
       "state": "Hamburg",
@@ -354,6 +383,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94451",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Mannheim HRB 751117\nFB-VD GmbH – Mönsheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -366,6 +396,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94453",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Mannheim HRB 725174\nFBM GmbH – Mönsheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -378,6 +409,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94538",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Iserlohn HRB 6419\nFCNP - HOLDING GmbH – Lüdenscheid",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -390,6 +422,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94467",
       "original_text": "Löschungsankündigung\nBrandenburg Amtsgericht Potsdam HRB 36810\nFahrer-Campus GmbH – Großbeeren",
       "type": "Löschungsankündigung",
       "state": "Brandenburg",
@@ -402,6 +435,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94545",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nHessen Amtsgericht Wiesbaden HRB 11814\nFalkatus GmbH – Wiesbaden",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Hessen",
@@ -414,6 +448,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94525",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Bonn HRB 25819\nFor You Verwaltungs GmbH – Weilerswist",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -426,6 +461,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94454",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Mannheim HRA 706943\nFriedrich Binder GmbH & Co. KG – Mönsheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -438,6 +474,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94455",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Mannheim HRA 706943\nFriedrich Binder GmbH & Co. KG – Mönsheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -450,6 +487,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94448",
       "original_text": "Löschungsankündigung\nBrandenburg Amtsgericht Potsdam HRB 19589\nFünfte Garden Grundstücks GmbH – Kloster Lehnin",
       "type": "Löschungsankündigung",
       "state": "Brandenburg",
@@ -462,6 +500,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94461",
       "original_text": "Einreichung neuer Dokumente\nBerlin Amtsgericht Berlin (Charlottenburg) HRB 188372\nGB infraVelo GmbH – Berlin",
       "type": "Einreichung neuer Dokumente",
       "state": "Berlin",
@@ -474,6 +513,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94483",
       "original_text": "Löschungsankündigung\nBerlin Amtsgericht Berlin (Charlottenburg) HRB 211546\nGDI GmbH – Berlin",
       "type": "Löschungsankündigung",
       "state": "Berlin",
@@ -486,6 +526,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94459",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nHamburg Amtsgericht Hamburg HRB 167551\nGGW Group GmbH – Hamburg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Hamburg",
@@ -498,6 +539,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94465",
       "original_text": "Einreichung neuer Dokumente\nBaden-Württemberg Amtsgericht Mannheim HRB 502113\nGanztagesschule Pforzheim GmbH – Pforzheim",
       "type": "Einreichung neuer Dokumente",
       "state": "Baden-Württemberg",
@@ -510,6 +552,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94497",
       "original_text": "Löschungsankündigung\nBaden-Württemberg Amtsgericht Stuttgart HRB 763998\nGlobal Metal Trader GmbH – Stuttgart",
       "type": "Löschungsankündigung",
       "state": "Baden-Württemberg",
@@ -522,6 +565,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94496",
       "original_text": "Löschungsankündigung\nBaden-Württemberg Amtsgericht Freiburg HRB 726395\nGodan´s Immobilien UG haftungsbeschränkt) – Jestetten",
       "type": "Löschungsankündigung",
       "state": "Baden-Württemberg",
@@ -534,6 +578,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94513",
       "original_text": "Löschungsankündigung\nNiedersachsen Amtsgericht Osnabrück HRB 214534\nGrünewelt Photovoltaik + Heizungstechnik UG (haftungsbeschränkt) – Sögel",
       "type": "Löschungsankündigung",
       "state": "Niedersachsen",
@@ -546,6 +591,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94518",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nRheinland-Pfalz Amtsgericht Koblenz GsR 216\nGuski-Link-eGbR – Kettig",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Rheinland-Pfalz",
@@ -558,6 +604,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94514",
       "original_text": "Einreichung neuer Dokumente\nNiedersachsen Amtsgericht Hannover HRB 58934\nHDI Versicherung AG – Hannover",
       "type": "Einreichung neuer Dokumente",
       "state": "Niedersachsen",
@@ -570,6 +617,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94551",
       "original_text": "Einreichung neuer Dokumente\nHessen Amtsgericht Frankfurt am Main HRB 52468\nHFM Managementgesellschaft für Hafen und Markt mit beschränkter Haftung – Frankfurt am Main",
       "type": "Einreichung neuer Dokumente",
       "state": "Hessen",
@@ -582,6 +630,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94474",
       "original_text": "Einreichung neuer Dokumente\nThüringen Amtsgericht Jena HRB 110582\nHKS Gebäudetechnik GmbH Apolda – Apolda",
       "type": "Einreichung neuer Dokumente",
       "state": "Thüringen",
@@ -594,6 +643,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94476",
       "original_text": "Löschungsankündigung\nSchleswig-Holstein Amtsgericht Pinneberg HRB 14897\nHLS GmbH – Hohenlockstedt",
       "type": "Löschungsankündigung",
       "state": "Schleswig-Holstein",
@@ -606,6 +656,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94478",
       "original_text": "Einreichung neuer Dokumente\nBrandenburg Amtsgericht Frankfurt/Oder HRB 2896\nHaus-, Grundstücks- und Baubetreuungsgesellschaft mbH, Wriezen – Wriezen",
       "type": "Einreichung neuer Dokumente",
       "state": "Brandenburg",
@@ -618,6 +669,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94456",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Mannheim HRB 746803\nHey Social GmbH – Mannheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -630,6 +682,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94509",
       "original_text": "Löschungsankündigung\nNiedersachsen Amtsgericht Osnabrück HRB 20467\nHolztec GmbH – Bramsche",
       "type": "Löschungsankündigung",
       "state": "Niedersachsen",
@@ -642,6 +695,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94452",
       "original_text": "Löschungsankündigung\nSchleswig-Holstein Amtsgericht Flensburg HRB 14347\nHygge unverpackt Franchise GmbH – Glücksburg",
       "type": "Löschungsankündigung",
       "state": "Schleswig-Holstein",
@@ -654,6 +708,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94449",
       "original_text": "Löschungsankündigung\nBaden-Württemberg Amtsgericht Ulm HRB 744592\nHärtsfelder Gala Bau UG (haftungsbeschränkt) – Heidenheim an der Brenz",
       "type": "Löschungsankündigung",
       "state": "Baden-Württemberg",
@@ -666,6 +721,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94541",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Bad Oeynhausen HRB 19561\nHäusliche Kranken- und Altenpflege GmbH – Löhne",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -678,6 +734,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94457",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nSchleswig-Holstein Amtsgericht Kiel HRA 12478\nJakob Strehlow e.K. – Kiel",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Schleswig-Holstein",
@@ -690,6 +747,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94492",
       "original_text": "Löschungsankündigung\nBaden-Württemberg Amtsgericht Ulm HRB 726872\nJaksa Stahl- und Maschinenbau GmbH – Süßen",
       "type": "Löschungsankündigung",
       "state": "Baden-Württemberg",
@@ -702,6 +760,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94539",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Iserlohn HRB 10785\nKIRCHHOFF Automotive AG – Iserlohn",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -714,6 +773,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94443",
       "original_text": "Löschungsankündigung\nSchleswig-Holstein Amtsgericht Flensburg HRB 1433\nKRISTRONICS GmbH – Harrislee",
       "type": "Löschungsankündigung",
       "state": "Schleswig-Holstein",
@@ -726,6 +786,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94503",
       "original_text": "Einreichung neuer Dokumente\nSachsen Amtsgericht Chemnitz HRB 7917\nKreisentsorgungs GmbH Vogtland – Oelsnitz/Vogtl.",
       "type": "Einreichung neuer Dokumente",
       "state": "Sachsen",
@@ -738,6 +799,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94500",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nSachsen Amtsgericht Leipzig HRB 17977\nKulturhaus Immobilien und Verwaltungsgesellschaft der Stadt Torgau mbH – Torgau",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Sachsen",
@@ -750,6 +812,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94477",
       "original_text": "Einreichung neuer Dokumente\nSachsen-Anhalt Amtsgericht Stendal HRB 16356\nKöthen Kultur und Marketing GmbH – Köthen (Anhalt)",
       "type": "Einreichung neuer Dokumente",
       "state": "Sachsen-Anhalt",
@@ -762,6 +825,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94444",
       "original_text": "Löschungsankündigung\nBerlin Amtsgericht Berlin (Charlottenburg) HRB 186433\nLACUS Nord GmbH – Berlin",
       "type": "Löschungsankündigung",
       "state": "Berlin",
@@ -774,6 +838,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94450",
       "original_text": "Einreichung neuer Dokumente\nBaden-Württemberg Amtsgericht Freiburg HRB 722081\nMVZ Bad Säckingen GmbH – Bad Säckingen",
       "type": "Einreichung neuer Dokumente",
       "state": "Baden-Württemberg",
@@ -786,6 +851,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94523",
       "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Siegburg HRB 12059\nMeba Projekt GmbH – Reichshof",
       "type": "Löschungsankündigung",
       "state": "Nordrhein-Westfalen",
@@ -798,6 +864,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94515",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBremen Amtsgericht Bremen HRB 34886\nMeyer Menü Bremen Verwaltungs-GmbH – Bremen",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bremen",
@@ -810,6 +877,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94517",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBremen Amtsgericht Bremen HRB 40813\nMeyer Menü HB GmbH – Bremen",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bremen",
@@ -822,6 +890,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94533",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Duisburg HRB 28504\nNetzler-Technik UG (haftungsbeschränkt) – Mülheim an der Ruhr",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -834,6 +903,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94462",
       "original_text": "Einreichung neuer Dokumente\nSachsen-Anhalt Amtsgericht Stendal HRB 10156\nNeue Bitterfelder Wohnungs- und Baugesellschaft mbH – Bitterfeld-Wolfen",
       "type": "Einreichung neuer Dokumente",
       "state": "Sachsen-Anhalt",
@@ -846,6 +916,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94536",
       "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Köln HRB 100240\nO-VIVA GmbH – Wesseling",
       "type": "Löschungsankündigung",
       "state": "Nordrhein-Westfalen",
@@ -858,6 +929,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94491",
       "original_text": "Einreichung neuer Dokumente\nBaden-Württemberg Amtsgericht Ulm HRB 680806\nPALUX Aktiengesellschaft – Bad Mergentheim",
       "type": "Einreichung neuer Dokumente",
       "state": "Baden-Württemberg",
@@ -870,6 +942,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94511",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNiedersachsen Amtsgericht Osnabrück HRB 209614\nPRO Automotive GmbH – Emsbüren",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Niedersachsen",
@@ -882,6 +955,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94524",
       "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Krefeld HRB 5678\nPTFE Coatings Gesellschaft für technische Beschichtungen mbH – Willich",
       "type": "Löschungsankündigung",
       "state": "Nordrhein-Westfalen",
@@ -894,6 +968,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94534",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Münster HRB 15942\nPapke Consulting GmbH – Münster",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -906,6 +981,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94527",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Duisburg HRA 13364\nPaul Underberg e.K. – Schermbeck",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -918,6 +994,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94468",
       "original_text": "Löschungsankündigung\nBerlin Amtsgericht Berlin (Charlottenburg) HRB 187153\nPiwowa Bau GmbH – Berlin",
       "type": "Löschungsankündigung",
       "state": "Berlin",
@@ -930,6 +1007,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94505",
       "original_text": "Löschungsankündigung\nSachsen Amtsgericht Dresden HRB 41571\nPlanHero Software GmbH – Dresden",
       "type": "Löschungsankündigung",
       "state": "Sachsen",
@@ -942,6 +1020,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94471",
       "original_text": "Löschungsankündigung\nBrandenburg Amtsgericht Potsdam HRB 22133\nQ-mo solar AG – Teltow",
       "type": "Löschungsankündigung",
       "state": "Brandenburg",
@@ -954,6 +1033,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94447",
       "original_text": "Einreichung neuer Dokumente\nBerlin Amtsgericht Berlin (Charlottenburg) HRB 199432\nQuantica GmbH – Berlin",
       "type": "Einreichung neuer Dokumente",
       "state": "Berlin",
@@ -966,6 +1046,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94498",
       "original_text": "Löschungsankündigung\nBaden-Württemberg Amtsgericht Stuttgart HRB 750835\nR & S Pflanzenöle GmbH – Marbach am Neckar",
       "type": "Löschungsankündigung",
       "state": "Baden-Württemberg",
@@ -978,6 +1059,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94519",
       "original_text": "Löschungsankündigung\nRheinland-Pfalz Amtsgericht Montabaur HRB 29329\nR-Clean GmbH Gebäudeservice – Wissen",
       "type": "Löschungsankündigung",
       "state": "Rheinland-Pfalz",
@@ -990,6 +1072,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94446",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Mannheim HRB 738599\nRaben Germany Immobilien GmbH – Mannheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -1002,6 +1085,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94516",
       "original_text": "Löschungsankündigung\nBremen Amtsgericht Bremen HRB 31974\nS A B A Gebäudereinigung GmbH – Bremen",
       "type": "Löschungsankündigung",
       "state": "Bremen",
@@ -1014,6 +1098,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94544",
       "original_text": "Löschungsankündigung\nHessen Amtsgericht Offenbach am Main HRB 49960\nSAFETY Medical UG (haftungsbeschränkt) – Offenbach am Main",
       "type": "Löschungsankündigung",
       "state": "Hessen",
@@ -1026,6 +1111,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94464",
       "original_text": "Einreichung neuer Dokumente\nMecklenburg-Vorpommern Amtsgericht Stralsund HRB 2209\nSWS Energie GmbH – Stralsund",
       "type": "Einreichung neuer Dokumente",
       "state": "Mecklenburg-Vorpommern",
@@ -1038,6 +1124,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94507",
       "original_text": "Einreichung neuer Dokumente\nSachsen Amtsgericht Dresden HRB 24980\nSachsenNetze GmbH – Dresden",
       "type": "Einreichung neuer Dokumente",
       "state": "Sachsen",
@@ -1050,6 +1137,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94506",
       "original_text": "Einreichung neuer Dokumente\nSachsen Amtsgericht Dresden HRB 24998\nSachsenNetze HS.HD GmbH – Dresden",
       "type": "Einreichung neuer Dokumente",
       "state": "Sachsen",
@@ -1062,6 +1150,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94530",
       "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Gelsenkirchen HRB 11529\nSari Immobilien Management GmbH – Bottrop",
       "type": "Löschungsankündigung",
       "state": "Nordrhein-Westfalen",
@@ -1074,6 +1163,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94521",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Düsseldorf HRB 86458\nShow Management Investor Beteiligungs GmbH – Düsseldorf",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Nordrhein-Westfalen",
@@ -1086,6 +1176,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94480",
       "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Coesfeld HRB 19780\nSmart Protect Deutschland UG (haftungsbeschränkt) – Gronau",
       "type": "Löschungsankündigung",
       "state": "Nordrhein-Westfalen",
@@ -1098,6 +1189,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94522",
       "original_text": "Einreichung neuer Dokumente\nNordrhein-Westfalen Amtsgericht Aachen HRB 14607\nStW aachen SERVICE gmbh – Aachen",
       "type": "Einreichung neuer Dokumente",
       "state": "Nordrhein-Westfalen",
@@ -1110,6 +1202,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94466",
       "original_text": "Einreichung neuer Dokumente\nSaarland Amtsgericht Saarbrücken HRB 63710\nStadtwerke Merzig Gesellschaft mit beschränkter Haftung – Merzig",
       "type": "Einreichung neuer Dokumente",
       "state": "Saarland",
@@ -1122,6 +1215,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94484",
       "original_text": "Einreichung neuer Dokumente\nMecklenburg-Vorpommern Amtsgericht Schwerin HRB 7105\nStädtische Kindertageseinrichtungen der Landeshauptstadt Schwerin gemeinnützige GmbH - Kita gGmbH – Schwerin",
       "type": "Einreichung neuer Dokumente",
       "state": "Mecklenburg-Vorpommern",
@@ -1134,6 +1228,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94463",
       "original_text": "Einreichung neuer Dokumente\nBaden-Württemberg Amtsgericht Mannheim HRB 350098\nStädtische Wohnungsbaugesellschaft Wiesloch mit beschränkter Haftung – Wiesloch",
       "type": "Einreichung neuer Dokumente",
       "state": "Baden-Württemberg",
@@ -1146,6 +1241,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94549",
       "original_text": "Löschungsankündigung\nHessen Amtsgericht Frankfurt am Main HRB 107009\nSynergy Construct Deutschland GmbH – Frankfurt am Main",
       "type": "Löschungsankündigung",
       "state": "Hessen",
@@ -1158,6 +1254,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94531",
       "original_text": "Einreichung neuer Dokumente\nNordrhein-Westfalen Amtsgericht Bochum HRB 9353 früher Amtsgericht Herne\nTGG Tagungsstätten- und Gastronomiegesellschaft Herne mbH – Herne",
       "type": "Einreichung neuer Dokumente",
       "state": "Nordrhein-Westfalen",
@@ -1171,6 +1268,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94532",
       "original_text": "Einreichung neuer Dokumente\nNordrhein-Westfalen Amtsgericht Bochum HRB 9353 früher Amtsgericht Herne\nTGG Tagungsstätten- und Gastronomiegesellschaft Herne mbH – Herne",
       "type": "Einreichung neuer Dokumente",
       "state": "Nordrhein-Westfalen",
@@ -1184,6 +1282,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94469",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nSachsen-Anhalt Amtsgericht Stendal HRA 7523\nTino Graßhof e.K. – Magdeburg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Sachsen-Anhalt",
@@ -1196,6 +1295,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94460",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBrandenburg Amtsgericht Potsdam HRA 8499\nTischlerei Stein e.K. – Ludwigsfelde",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Brandenburg",
@@ -1208,6 +1308,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94528",
       "original_text": "Sonstige Registerbekanntmachung\nNordrhein-Westfalen Amtsgericht Siegen HRB 9512\nTuS Ferndorf Handball GmbH – Kreuztal",
       "type": "Sonstige Registerbekanntmachung",
       "state": "Nordrhein-Westfalen",
@@ -1220,6 +1321,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94520",
       "original_text": "Löschungsankündigung\nRheinland-Pfalz Amtsgericht Mainz HRA 43141\nVArea GmbH & Co. KG – Mainz",
       "type": "Löschungsankündigung",
       "state": "Rheinland-Pfalz",
@@ -1232,6 +1334,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94547",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nHessen Amtsgericht Offenbach am Main HRB 48478\nViridium Service Management GmbH – Neu-Isenburg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Hessen",
@@ -1244,6 +1347,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94488",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nMecklenburg-Vorpommern Amtsgericht Schwerin VR 4180\nVolkssolidarität, Kreisverband Schwerin/Nordwestmecklenburg e.V. – Gadebusch",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Mecklenburg-Vorpommern",
@@ -1256,6 +1360,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94472",
       "original_text": "Einreichung neuer Dokumente\nBaden-Württemberg Amtsgericht Mannheim HRB 105385\nVolkswohnung Service GmbH – Karlsruhe",
       "type": "Einreichung neuer Dokumente",
       "state": "Baden-Württemberg",
@@ -1268,6 +1373,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94501",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nSachsen Amtsgericht Leipzig HRB 14154\nWirtschaftsförderungs- und Projektentwicklungsgesellschaft der Stadt Torgau mbH – Torgau",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Sachsen",
@@ -1280,6 +1386,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94470",
       "original_text": "Einreichung neuer Dokumente\nBaden-Württemberg Amtsgericht Freiburg HRB 721134\nWohn- und Gewerbeförderung Allensbach GmbH – Allensbach",
       "type": "Einreichung neuer Dokumente",
       "state": "Baden-Württemberg",
@@ -1292,6 +1399,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94495",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Mannheim HRA 712108\nbe.social e.K. Inhaber Paul Przyklek – Mannheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -1304,6 +1412,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94537",
       "original_text": "Einreichung neuer Dokumente\nNordrhein-Westfalen Amtsgericht Köln HRB 42852\nmatratzen direct AG – Köln",
       "type": "Einreichung neuer Dokumente",
       "state": "Nordrhein-Westfalen",
@@ -1316,6 +1425,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94487",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBaden-Württemberg Amtsgericht Stuttgart HRB 771033\nparsionate GmbH – Stuttgart",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Baden-Württemberg",
@@ -1328,6 +1438,7 @@
     },
     {
       "date": "2024-11-25",
+      "id": "94508",
       "original_text": "Einreichung neuer Dokumente\nNiedersachsen Amtsgericht Osnabrück HRB 18010\npbr Planungsbüro Rohling AG – Osnabrück",
       "type": "Einreichung neuer Dokumente",
       "state": "Niedersachsen",

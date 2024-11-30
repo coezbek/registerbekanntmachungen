@@ -1,10 +1,12 @@
 {
   "date": "2024-11-09",
-  "date_of_scrape": "2024-11-22",
-  "tool_version": "0.1.0",
+  "date_of_scrape": "2024-11-30T13:12:57.020Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 21,
   "announcements": [
     {
       "date": "2024-11-09",
+      "id": "93068",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 222918\n3A-BAD Verwaltungs GmbH – Inning a.Ammersee",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -17,6 +19,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93063",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Nürnberg HRB 43734\nAnytest Engineering GmbH – Nürnberg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -29,6 +32,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93073",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 227418\nBavaria Export Handels GmbH – München",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -41,6 +45,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93069",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Nürnberg HRB 29506\nDORI Vermögensverwaltungs GmbH – Schwaig bei Nürnberg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -53,6 +58,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93066",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht Fürth HRA 6895\nECKA Granulate GmbH & Co. KG – Fürth",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -65,6 +71,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93053",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht Augsburg HRB 26901\nEEG Europium Energie Gesellschaft mbH – Eching am Ammersee",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -77,6 +84,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93067",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Nürnberg HRB 29015\nFG Leasing Holding GmbH – Schwaig b. Nürnberg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -89,6 +97,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93062",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 202908\nFreeship UG (haftungsbeschränkt) – Hohenbrunn",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -101,6 +110,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93059",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Bamberg HRA 9928\nGfI - Gesellschaft für Industrieförderung mbH & Co. Verwaltungs KG – Buttenheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -113,6 +123,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93058",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Bamberg HRB 8798\nGlobus Development GmbH – Buttenheim",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -125,6 +136,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93054",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht Regensburg HRB 14741\nHGKS UG (haftungsbeschränkt) – Cham",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -137,6 +149,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93055",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 138466\nLightspeed Media GmbH – München",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -149,6 +162,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93060",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht Regensburg HRB 17869\nLocatYa GmbH – Regensburg",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -161,6 +175,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93070",
       "original_text": "Sonstige Registerbekanntmachung\nBayern Amtsgericht Nürnberg HRB 2288\nMartha-Maria Krankenhaus gemeinnützige GmbH – Nürnberg",
       "type": "Sonstige Registerbekanntmachung",
       "state": "Bayern",
@@ -173,6 +188,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93064",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 251619\nMondo Clean & Coring GmbH – München",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -185,6 +201,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93072",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Nürnberg HRB 6644\nNürnberger Beamten Lebensversicherung Aktiengesellschaft – Nürnberg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -197,6 +214,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93065",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Nürnberg HRB 9342\nNürnberger Lebensversicherung AG – Nürnberg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",
@@ -209,6 +227,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93071",
       "original_text": "Sonstige Registerbekanntmachung\nBayern Amtsgericht München HRB 270499\nReal I.S. Property Management GmbH – München",
       "type": "Sonstige Registerbekanntmachung",
       "state": "Bayern",
@@ -221,6 +240,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93056",
       "original_text": "Löschungsankündigung\nBayern Amtsgericht München HRB 188666\nRigo GmbH – München",
       "type": "Löschungsankündigung",
       "state": "Bayern",
@@ -233,6 +253,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93061",
       "original_text": "Einreichung neuer Dokumente\nBayern Amtsgericht Augsburg HRB 18093\nStadtwerke Augsburg Holding GmbH – Augsburg",
       "type": "Einreichung neuer Dokumente",
       "state": "Bayern",
@@ -245,6 +266,7 @@
     },
     {
       "date": "2024-11-09",
+      "id": "93057",
       "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nBayern Amtsgericht Nürnberg HRB 23509\nnorisTEC GmbH – Nürnberg",
       "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
       "state": "Bayern",

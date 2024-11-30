@@ -1,11 +1,12 @@
 {
   "date": "2024-11-24",
-  "date_of_scrape": "2024-11-25T04:02:08.551Z",
-  "tool_version": "0.1.0",
+  "date_of_scrape": "2024-11-30T13:08:46.387Z",
+  "tool_version": "0.2.0",
   "number_of_announcements": 2,
   "announcements": [
     {
       "date": "2024-11-24",
+      "id": "94441",
       "original_text": "Einreichung neuer Dokumente\nNordrhein-Westfalen Amtsgericht Düsseldorf HRB 60360\nProTect Versicherung Aktiengesellschaft – Düsseldorf",
       "type": "Einreichung neuer Dokumente",
       "state": "Nordrhein-Westfalen",
@@ -18,6 +19,7 @@
     },
     {
       "date": "2024-11-24",
+      "id": "94442",
       "original_text": "Einreichung neuer Dokumente\nNordrhein-Westfalen Amtsgericht Düsseldorf HRB 69594\nVdW Pensionsfonds AG – Langenfeld",
       "type": "Einreichung neuer Dokumente",
       "state": "Nordrhein-Westfalen",
