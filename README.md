@@ -65,7 +65,7 @@ Usage: registerbekanntmachungen [options]
 The data contains the following fields for each announcement:
 
 - `date`: The date the announcement was published as an ISO 8601 string, e.g. "2024-10-01".
-- `id`: A (hopefully) unique identifier for the announcement provided by Handelsregister.de. As this an implementation detail of the website, there is no guarantee that this is unique and or continuous. 
+- `id`: An additional identifier to distinguish multiple announcements for the same company on the same day of the same type. It is provided by Handelsregister.de and it might not really be unique. As this an implementation detail of the website, there is no guarantee that this is unique and or continuous. 
 - `original_text`: The original link text of the announcement.
 - `court`: The court where the announcement was published, e.g. "Amtsgericht Berlin (Charlottenburg)".
 - `registernumber`: The register number of the company including the prefix (e.g. "HRB 12345" or "VR 123").
