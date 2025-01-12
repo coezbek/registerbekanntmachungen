@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   scrape-and-commit:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout Repository
@@ -24,7 +24,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libnss3 libgconf-2-4 wget unzip
+          sudo apt-get install -y libnss3 wget unzip
           gem install bundler
           bundle install
 
