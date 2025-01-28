@@ -160,12 +160,22 @@ def get_detailed_announcement(datum, id, view_state, cookies)
     'User-Agent' => 'Your User Agent'
   }
 
-  # Create and send the POST request
-  http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
-  request = Net::HTTP::Post.new(uri.request_uri, headers)
-  request.set_form_data(post_data)
-  response = http.request(request)
+  response = nil
+  3.times do
+    break if response
+  
+    # Create and send the POST request
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.open_timeout = 30
+    http.read_timeout = 60
+
+    request = Net::HTTP::Post.new(uri.request_uri, headers)
+    request.set_form_data(post_data)
+    response = http.request(request)
+  rescue Net::OpenTimeout, Net::ReadTimeout => e
+    puts "Timeout error: #{e.message}"
+  end
 
   # Parse the response
   response.body
