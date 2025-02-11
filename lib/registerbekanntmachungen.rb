@@ -179,6 +179,9 @@ if dates_to_download.empty? && !@reload
   exit 1
 end
 
+# Extend timeout of Watir
+Watir.default_timeout = 60
+
 # Initialize the headless browser
 options = Selenium::WebDriver::Chrome::Options.new
 options.add_argument('--disable-gpu')
