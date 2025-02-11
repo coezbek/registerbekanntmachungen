@@ -205,7 +205,7 @@ browser.window.maximize
 
 begin
 
-  navigation_mode = :direct # :from_homepage
+  navigation_mode = :from_homepage # :direct 
 
   case navigation_mode 
   when :from_homepage
