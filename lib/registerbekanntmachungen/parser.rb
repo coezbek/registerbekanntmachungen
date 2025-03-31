@@ -142,10 +142,10 @@ def get_detailed_announcement(datum, id, view_state, cookies)
   # Prepare the POST data
   post_data = {
     'javax.faces.partial.ajax' => 'true',
-    'javax.faces.source' => 'bekanntMachungenForm:j_idt114',
+    'javax.faces.source' => 'bekanntMachungenForm:j_idt116',
     'javax.faces.partial.execute' => 'bekanntMachungenForm',
     'javax.faces.partial.render' => 'bekanntMachungenForm',
-    'bekanntMachungenForm:j_idt114' => 'bekanntMachungenForm:j_idt114',
+    'bekanntMachungenForm:j_idt116' => 'bekanntMachungenForm:j_idt116',
     'datum' => datum,
     'id' => id,
     'bekanntMachungenForm' => 'bekanntMachungenForm',
@@ -173,6 +173,11 @@ def get_detailed_announcement(datum, id, view_state, cookies)
     request = Net::HTTP::Post.new(uri.request_uri, headers)
     request.set_form_data(post_data)
     response = http.request(request)
+    
+    if !(response.body =~ /rrbPanel_content|srbPanel_content/)
+      puts response.body.inspect
+      raise "Necessary divs with rrbPanel_content or srbPanel_content not found in the response"
+    end
   rescue Net::OpenTimeout, Net::ReadTimeout => e
     puts "Timeout error: #{e.message}"
   end
