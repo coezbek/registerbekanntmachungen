@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+ruby "3.4.2"
+
 source "https://rubygems.org"
 
 # Specify your gem's dependencies in registerbekanntmachungen.gemspec
@@ -16,3 +18,7 @@ gem "colorize", "~> 1.1"
 gem "nokogiri", "~> 1.16"
 
 gem "rake", "~> 13.0"
+
+gem "base64", "~> 0.2.0"
+
+gem "logger", "~> 1.7"
