@@ -1,0 +1,21 @@
+{
+  "date": "2025-04-06",
+  "date_of_scrape": "2025-04-07T04:01:57.733Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-04-06",
+      "id": "105779",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Dortmund HRB 34302\nCinar Trockenbau UG (haftungsbeschränkt) – Dortmund",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Dortmund",
+      "registernummer": "HRB 34302",
+      "registerart": "HRB",
+      "company_name": "Cinar Trockenbau UG (haftungsbeschränkt)",
+      "company_seat": "Dortmund",
+      "details": ""
+    }
+  ]
+}
