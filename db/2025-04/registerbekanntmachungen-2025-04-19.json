@@ -1,0 +1,21 @@
+{
+  "date": "2025-04-19",
+  "date_of_scrape": "2025-04-20T04:02:02.177Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-04-19",
+      "id": "106981",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Köln HRB 117444\nDynamik Gerüstbau GmbH – Köln",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Köln",
+      "registernummer": "HRB 117444",
+      "registerart": "HRB",
+      "company_name": "Dynamik Gerüstbau GmbH",
+      "company_seat": "Köln",
+      "details": ""
+    }
+  ]
+}
