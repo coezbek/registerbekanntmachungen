@@ -1,0 +1,21 @@
+{
+  "date": "2025-04-21",
+  "date_of_scrape": "2025-04-22T04:02:04.971Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-04-21",
+      "id": "106982",
+      "original_text": "Sonstige Registerbekanntmachung\nHessen Amtsgericht Gießen VR 2260\nFörderverein der Goetheschule Staufenberg e.V. – Staufenberg",
+      "type": "Sonstige Registerbekanntmachung",
+      "state": "Hessen",
+      "amtsgericht": "Amtsgericht Gießen",
+      "registernummer": "VR 2260",
+      "registerart": "VR",
+      "company_name": "Förderverein der Goetheschule Staufenberg e.V.",
+      "company_seat": "Staufenberg",
+      "details": ""
+    }
+  ]
+}
