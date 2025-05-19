@@ -1,0 +1,21 @@
+{
+  "date": "2025-05-18",
+  "date_of_scrape": "2025-05-19T04:06:28.532Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-05-18",
+      "id": "109415",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Düsseldorf HRB 12023\nWW (Deutschland) GmbH – Düsseldorf",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Düsseldorf",
+      "registernummer": "HRB 12023",
+      "registerart": "HRB",
+      "company_name": "WW (Deutschland) GmbH",
+      "company_seat": "Düsseldorf",
+      "details": ""
+    }
+  ]
+}
