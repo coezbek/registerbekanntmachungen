@@ -1,0 +1,21 @@
+{
+  "date": "2025-05-25",
+  "date_of_scrape": "2025-05-26T04:05:17.292Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-05-25",
+      "id": "110140",
+      "original_text": "Löschungsankündigung\nBremen Amtsgericht Bremen HRB 35936\nApollo Dienstleistungen GmbH – Bremen",
+      "type": "Löschungsankündigung",
+      "state": "Bremen",
+      "amtsgericht": "Amtsgericht Bremen",
+      "registernummer": "HRB 35936",
+      "registerart": "HRB",
+      "company_name": "Apollo Dienstleistungen GmbH",
+      "company_seat": "Bremen",
+      "details": ""
+    }
+  ]
+}
