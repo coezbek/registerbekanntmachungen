@@ -203,6 +203,9 @@ browser = Watir::Browser.new :chrome, options: options
 # Maximize browser window to ensure all elements are accessible
 browser.window.maximize
 
+puts "Chrome: #{browser.driver.capabilities.browser_version}" if @verbose
+puts "Viewport: #{browser.window.size}" if @verbose
+
 begin
 
   navigation_mode = :from_homepage # :direct 
