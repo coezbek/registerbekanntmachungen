@@ -219,23 +219,18 @@ begin
     browser.wait_until { browser.a(title: 'Registerbekanntmachungen').exists? }
 
     puts 'Accessing the "Registerbekanntmachungen" section...'
-    attempts_to_find_section = 3
-    while attempts_to_find_section > 0
-      found = false
-      browser.as(title: 'Registerbekanntmachungen').each_with_index do |link, index|
-        if link.present?
-          link.click
-          puts "Clicked Link ##{index + 1}: Title: #{link.title}, Href: #{link.href}"
-          found = true
-          break
-        else
-          puts "Link not present ##{index + 1}: Title: #{link.title}, Href: #{link.href}"
-        end
-      end
-      break if found
-      attempts_to_find_section -= 1
-      sleep 3
-    end
+    browser.link(title: 'Registerbekanntmachungen', visible: true)
+       .wait_until(&:present?)      # waits until a visible copy shows up
+       .click
+
+    # On Github the following no longer works, after working 150 times:
+    # browser.as(title: 'Registerbekanntmachungen').each_with_index do |link, index|
+    #   if link.present?
+    #     link.click
+    #     puts "Link ##{index + 1}: Title: #{link.title}, Href: #{link.href}, Present? #{link.present?}"
+    #     break
+    #   end
+    # end
 
     # Wait for the page to load
     puts "Waiting for the 'Registerbekanntmachungen' title to be set..." if @verbose
