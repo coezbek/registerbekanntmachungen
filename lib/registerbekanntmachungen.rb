@@ -201,7 +201,7 @@ options.prefs = {
 browser = Watir::Browser.new :chrome, options: options
 
 # Maximize browser window to ensure all elements are accessible
-browser.window.maximize
+browser.window.resize_to(1920, 1080) if @headless
 
 puts "Chrome: #{browser.driver.capabilities.browser_version}" if @verbose
 puts "Viewport: #{browser.window.size}" if @verbose
