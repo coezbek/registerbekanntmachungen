@@ -220,9 +220,11 @@ begin
 
     puts 'Accessing the "Registerbekanntmachungen" section...'
     browser.as(title: 'Registerbekanntmachungen').each_with_index do |link, index|
-      # puts "Link ##{index + 1}: Title: #{link.title}, Href: #{link.href}, Present? #{link.present?}"
-
-      link.click if link.present?
+      if link.present?
+        link.click
+        puts "Clicked Link ##{index + 1}: Title: #{link.title}, Href: #{link.href}, Present? #{link.present?}"
+        break
+      end
     end
 
     # Wait for the page to load
