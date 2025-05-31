@@ -219,12 +219,22 @@ begin
     browser.wait_until { browser.a(title: 'Registerbekanntmachungen').exists? }
 
     puts 'Accessing the "Registerbekanntmachungen" section...'
-    browser.as(title: 'Registerbekanntmachungen').each_with_index do |link, index|
-      if link.present?
-        link.click
-        puts "Clicked Link ##{index + 1}: Title: #{link.title}, Href: #{link.href}, Present? #{link.present?}"
-        break
+    attempts_to_find_section = 3
+    while attempts_to_find_section > 0
+      found = false
+      browser.as(title: 'Registerbekanntmachungen').each_with_index do |link, index|
+        if link.present?
+          link.click
+          puts "Clicked Link ##{index + 1}: Title: #{link.title}, Href: #{link.href}"
+          found = true
+          break
+        else
+          puts "Link not present ##{index + 1}: Title: #{link.title}, Href: #{link.href}"
+        end
       end
+      break if found
+      attempts_to_find_section -= 1
+      sleep 3
     end
 
     # Wait for the page to load
