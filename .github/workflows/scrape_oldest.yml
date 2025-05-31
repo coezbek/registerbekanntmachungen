@@ -46,6 +46,13 @@ jobs:
         run: |
           bundle exec ruby lib/registerbekanntmachungen.rb -o -v
 
+      - name: Upload Watir debug artifacts
+        if: failure() # use `always()` to keep every run
+        uses: actions/upload-artifact@v4
+        with:
+          name: watir-debug
+          path: tmp 
+
       - name: Commit Scraper Output
         run: |
           git config --global user.name 'github-actions[bot]'

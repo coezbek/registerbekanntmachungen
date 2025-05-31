@@ -421,10 +421,16 @@ begin
 rescue Watir::Wait::TimeoutError => e
 
   Dir.mkdir('tmp') unless File.directory?('tmp')
-  filename = File.join('tmp', "error-#{Time.now.strftime('%Y-%m-%d-%H%M%S')}.png")
-  browser.screenshot.save(filename)
+  timestamp  = Time.now.strftime('%Y-%m-%d-%H%M%S')
 
-  raise
+  screenshot = File.join('tmp', "error-#{timestamp}.png")
+  dom_file   = File.join('tmp', "error-#{timestamp}.html")
+
+  browser.screenshot.save(screenshot)         
+  File.write(dom_file, browser.html)
+
+  warn "Saved debug files to tmp/: #{screenshot}, #{dom_file}"
+  raise # re-throw so CI marks the job failed
 
 ensure
   puts 'Closing the browser...'
