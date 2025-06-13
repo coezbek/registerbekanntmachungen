@@ -142,10 +142,10 @@ def get_detailed_announcement(datum, id, view_state, cookies)
   # Prepare the POST data
   post_data = {
     'javax.faces.partial.ajax' => 'true',
-    'javax.faces.source' => 'bekanntMachungenForm:j_idt116',
+    'javax.faces.source' => 'bekanntMachungenForm:j_idt112',
     'javax.faces.partial.execute' => 'bekanntMachungenForm',
     'javax.faces.partial.render' => 'bekanntMachungenForm',
-    'bekanntMachungenForm:j_idt116' => 'bekanntMachungenForm:j_idt116',
+    'bekanntMachungenForm:j_idt112' => 'bekanntMachungenForm:j_idt112',
     'datum' => datum,
     'id' => id,
     'bekanntMachungenForm' => 'bekanntMachungenForm',
