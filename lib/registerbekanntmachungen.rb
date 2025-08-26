@@ -1,3 +1,5 @@
+# registerbekanntmachungen.rb
+
 require 'watir'
 require 'webdrivers'
 require 'colorize'
@@ -287,6 +289,10 @@ begin
   # Extract ViewState
   view_state = browser.hidden(name: 'javax.faces.ViewState').value
 
+  # Get the jdt id from the script tag which defines the remoteBekanntmachung function
+  remote_bekanntmachung_id = browser.script(text: /remoteBekanntmachung =/).id
+  puts "javax.faces.source Remote bekanntmachung id: #{remote_bekanntmachung_id}" if @verbose
+
   # Get cookies
   cookies = browser.cookies.to_a.map { |c| "#{c[:name]}=#{c[:value]}" }.join('; ')
 
@@ -349,8 +355,8 @@ begin
           id = Regexp.last_match(2)
           
           # Make the POST request
-          response_body = get_detailed_announcement(datum, id, view_state, cookies)
-        
+          response_body = get_detailed_announcement(datum, id, remote_bekanntmachung_id, view_state, cookies)
+  
           # Parse the announcement
           announcement_text = parse_announcement_response(response_body)
           if announcement_text.nil? || announcement_text.empty?

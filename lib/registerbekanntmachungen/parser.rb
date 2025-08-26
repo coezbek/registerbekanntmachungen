@@ -1,4 +1,4 @@
-
+# parser.rb
 require 'net/http'
 require 'uri'
 require 'nokogiri'
@@ -136,16 +136,16 @@ def parse_announcement(lines, onclick)
 
 end
 
-def get_detailed_announcement(datum, id, view_state, cookies)
+def get_detailed_announcement(datum, id, source_id, view_state, cookies)
   uri = URI('https://www.handelsregister.de/rp_web/xhtml/bekanntmachungen.xhtml')
 
   # Prepare the POST data
   post_data = {
     'javax.faces.partial.ajax' => 'true',
-    'javax.faces.source' => 'bekanntMachungenForm:j_idt112',
+    'javax.faces.source' => source_id,
     'javax.faces.partial.execute' => 'bekanntMachungenForm',
     'javax.faces.partial.render' => 'bekanntMachungenForm',
-    'bekanntMachungenForm:j_idt112' => 'bekanntMachungenForm:j_idt112',
+    source_id => source_id,
     'datum' => datum,
     'id' => id,
     'bekanntMachungenForm' => 'bekanntMachungenForm',
@@ -175,8 +175,8 @@ def get_detailed_announcement(datum, id, view_state, cookies)
     response = http.request(request)
     
     if !(response.body =~ /rrbPanel_content|srbPanel_content/)
-      puts response.body.inspect
-      raise "Necessary divs with rrbPanel_content or srbPanel_content not found in the response"
+      puts "    " + response.body.to_s[0..5000].gsub("\n", '    ')
+      raise "Necessary divs with rrbPanel_content or srbPanel_content not found in the response for request with id #{id}, source_id #{source_id}, datum #{datum}."
     end
   rescue Net::OpenTimeout, Net::ReadTimeout => e
     puts "Timeout error: #{e.message}"
