@@ -8,3 +8,6 @@
 /tmp/
 .bash_history
 .ruby-version
+/public/db/
+/public/*.json
+/node_modules/
