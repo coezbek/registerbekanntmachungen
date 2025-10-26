@@ -4,14 +4,23 @@ require 'uri'
 require 'nokogiri'
 
 def parse_announcement_response(response_body)
-  # Parse the XML response
-  doc = Nokogiri::XML(response_body)
 
-  # Find the CDATA section containing the announcement HTML
-  cdata = doc.xpath('//update').text
+  html_doc = nil
 
-  # Parse the HTML content
-  html_doc = Nokogiri::HTML(cdata)
+  # Check if the response is the old XML format or the new full HTML format
+  if response_body.strip.start_with?('<?xml')
+    # Parse the XML response
+    doc = Nokogiri::XML(response_body)
+
+    # Find the CDATA section containing the announcement HTML
+    cdata = doc.xpath('//update').text
+
+    # Parse the HTML content
+    html_doc = Nokogiri::HTML(cdata)
+  else
+    # The whole response body is the HTML page, so parse it directly.
+    html_doc = Nokogiri::HTML(response_body)
+  end
 
   # Extract the desired text
   # For example, get the text within specific labels or divs
@@ -173,7 +182,19 @@ def get_detailed_announcement(datum, id, source_id, view_state, cookies)
     request = Net::HTTP::Post.new(uri.request_uri, headers)
     request.set_form_data(post_data)
     response = http.request(request)
-    
+
+    if response.body =~ /redirect url="(.*?)">/
+      redirect_url = $1
+      uri = URI("https://www.handelsregister.de" + redirect_url)
+      headers = {
+        'Cookie' => cookies,
+        'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+      }
+      request = Net::HTTP::Get.new(uri.request_uri, headers)
+      response = http.request(request)
+    end
+
     if !(response.body =~ /rrbPanel_content|srbPanel_content/)
       puts "    " + response.body.to_s[0..5000].gsub("\n", '    ')
       raise "Necessary divs with rrbPanel_content or srbPanel_content not found in the response for request with id #{id}, source_id #{source_id}, datum #{datum}."
