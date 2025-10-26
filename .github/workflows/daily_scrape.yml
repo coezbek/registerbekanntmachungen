@@ -55,3 +55,35 @@ jobs:
           git add db/
           git commit -m "Automated update: Scraper results for $(date -d "yesterday" +%Y-%m-%d)"
           git push
+
+  build-and-deploy:
+    needs: scrape
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # Use a recent LTS version
+
+      - name: Install build dependencies
+        run: npm install fuse.js
+
+      - name: Pre-build search data and manifest
+        run: node scripts/build-index.js
+
+      - name: Copy raw data files for on-demand loading
+        run: cp -r db public/db
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # The directory to publish
+          publish_dir: ./public
+          # The branch to deploy to
+          publish_branch: gh-pages
+          # Create a clean history for each deployment
+          force_orphan: true
