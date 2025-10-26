@@ -360,7 +360,7 @@ begin
           # Parse the announcement
           announcement_text = parse_announcement_response(response_body)
           if announcement_text.nil? || announcement_text.empty?
-            puts "WARN: Failed to extract announcement details for announcement #{index} on #{date_text} from responsebody: #{text}"
+            puts "WARN: Failed to extract announcement details for announcement #{index} on #{date_text} from responsebody: #{response_body}"
           end
 
           announcement[:details] = announcement_text
