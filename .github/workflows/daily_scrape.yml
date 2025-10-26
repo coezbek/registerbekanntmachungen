@@ -57,7 +57,7 @@ jobs:
           git push
 
   build-and-deploy:
-    needs: scrape
+    needs: scrape-and-commit
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch
