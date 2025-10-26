@@ -1,0 +1,21 @@
+{
+  "date": "2025-07-27",
+  "date_of_scrape": "2025-08-26T15:49:31.749Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-07-27",
+      "id": "117711",
+      "original_text": "Löschungsankündigung\nBrandenburg Amtsgericht Potsdam HRB 39775\nB&S Bolsunow Beteiligungs GmbH – Potsdam",
+      "type": "Löschungsankündigung",
+      "state": "Brandenburg",
+      "amtsgericht": "Amtsgericht Potsdam",
+      "registernummer": "HRB 39775",
+      "registerart": "HRB",
+      "company_name": "B&S Bolsunow Beteiligungs GmbH",
+      "company_seat": "Potsdam",
+      "details": "27.07.2025 (Bekanntmachungsdatum)\n\nBrandenburg Amtsgericht Potsdam HRB 39775\nLöschungsankündigung\n\nB&S Bolsunow Beteiligungs GmbH\nGesellschaft mit beschränkter Haftung\nPotsdam\n\nBei der nachstehenden Gesellschaft wird das Amtslöschungsverfahren gemäß § 394 FamFG eingeleitet.\nDie Widerspruchsfrist beträgt 8 Wochen."
+    }
+  ]
+}
