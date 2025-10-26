@@ -26,14 +26,14 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libnss3 wget unzip
+          sudo apt-get install -y -qq libnss3 wget unzip
           gem install bundler
           bundle install
 
       - name: Install Chrome
         run: |
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install -y ./google-chrome-stable_current_amd64.deb
+          sudo apt install -y -qq ./google-chrome-stable_current_amd64.deb
 
       - name: Install ChromeDriver
         run: |
