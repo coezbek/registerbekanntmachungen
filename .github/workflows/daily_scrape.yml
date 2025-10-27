@@ -53,8 +53,12 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add db/
-          git commit -m "Automated update: Scraper results for $(date -d "yesterday" +%Y-%m-%d)"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Automated update: Scraper results for $(date -d 'yesterday' +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes to commit."
+          fi
 
   build-and-deploy:
     needs: scrape-and-commit
