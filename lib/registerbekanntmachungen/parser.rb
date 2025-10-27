@@ -146,7 +146,7 @@ def parse_announcement(lines, onclick)
 end
 
 def get_detailed_announcement(datum, id, source_id, view_state, cookies)
-  uri = URI('https://www.handelsregister.de/rp_web/xhtml/bekanntmachungen.xhtml')
+  uri = URI('https://www.handelsregister.de/rp_web/bekanntmachungen/welcome.xhtml')
 
   # Prepare the POST data
   post_data = {
@@ -179,11 +179,15 @@ def get_detailed_announcement(datum, id, source_id, view_state, cookies)
     http.open_timeout = 30
     http.read_timeout = 60
 
+    now = Time.now
     request = Net::HTTP::Post.new(uri.request_uri, headers)
     request.set_form_data(post_data)
     response = http.request(request)
+    puts "  POST Took: #{Time.now - now} seconds" if @verbose
 
     if response.body =~ /redirect url="(.*?)">/
+
+      now = Time.now
       redirect_url = $1
       uri = URI("https://www.handelsregister.de" + redirect_url)
       headers = {
@@ -193,6 +197,7 @@ def get_detailed_announcement(datum, id, source_id, view_state, cookies)
       }
       request = Net::HTTP::Get.new(uri.request_uri, headers)
       response = http.request(request)
+      puts "  GET Took: #{Time.now - now} seconds" if @verbose
     end
 
     if !(response.body =~ /rrbPanel_content|srbPanel_content/)
