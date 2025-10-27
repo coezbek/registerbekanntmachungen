@@ -168,48 +168,73 @@ def get_detailed_announcement(datum, id, source_id, view_state, cookies)
     'Faces-Request' => 'partial/ajax',
     'User-Agent' => 'Your User Agent'
   }
+  # Create and send the POST request
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true
+  http.open_timeout = 30
+  http.read_timeout = 60
 
-  response = nil
-  3.times do
-    break if response
+  timing = false
   
-    # Create and send the POST request
-    http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = true
-    http.open_timeout = 30
-    http.read_timeout = 60
-
-    timing = false
-
+  response = nil
+  10.times do
     now = Time.now if timing
     request = Net::HTTP::Post.new(uri.request_uri, headers)
     request.set_form_data(post_data)
-    response = http.request(request)
+    response = http.request(request).body
     puts "  POST Took: #{Time.now - now} seconds" if timing
 
-    if response.body =~ /redirect url="(.*?)">/
-
-      now = Time.now if timing
-      redirect_url = $1
-      uri = URI("https://www.handelsregister.de" + redirect_url)
-      headers = {
-        'Cookie' => cookies,
-        'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-        'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
-      }
-      request = Net::HTTP::Get.new(uri.request_uri, headers)
-      response = http.request(request)
-      puts "  GET Took: #{Time.now - now} seconds" if timing
+    if response =~ /<redirect url="\/rp_web\/error\/bug\.xhtml">/
+      puts "Received bug error partial, retrying..."
+      sleep 1
+      next
+    else
+      break
     end
-
-    if !(response.body =~ /rrbPanel_content|srbPanel_content/)
-      puts "    " + response.body.to_s[0..5000].gsub("\n", '    ')
-      raise "Necessary divs with rrbPanel_content or srbPanel_content not found in the response for request with id #{id}, source_id #{source_id}, datum #{datum}."
-    end
-  rescue Net::OpenTimeout, Net::ReadTimeout => e
-    puts "Timeout error: #{e.message}"
   end
 
-  # Parse the response
-  response.body
+  if response =~ /<redirect url="\/rp_web\/error\/bug\.xhtml">/
+    puts "Response: " + response.to_s[0..5000].gsub("\n", '    ')
+    raise "Failed to retrieve detailed announcement for request with id #{id}, source_id #{source_id}, datum #{datum} due to bug.xhtml after 3 retries."
+  end
+
+  if response =~ /redirect url="(.*?)">/
+
+    redirect_response = response
+    redirect_url = $1
+    uri = URI("https://www.handelsregister.de" + redirect_url)
+    headers = {
+      'Cookie' => cookies,
+      'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+      'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    }
+
+    3.times do
+
+      now = Time.now if timing
+      request = Net::HTTP::Get.new(uri.request_uri, headers)
+      response = http.request(request).body
+      puts "  GET Took: #{Time.now - now} seconds" if timing
+      
+      if response.strip == '' || response =~ /<title>Registerportal \| Error/
+
+        puts "Received error page, retrying..."
+        puts "  Redirect: " + redirect_response.to_s[0..5000].gsub("\n", '    ')
+        puts "  Response: " + response.to_s[0..5000].gsub("\n", '    ')
+
+        next
+      else
+        break
+      end
+    end
+
+  end
+
+
+  if !(response =~ /rrbPanel_content|srbPanel_content/)
+    puts "Response: " + response.to_s[0..5000].gsub("\n", '    ')
+    raise "Necessary divs with rrbPanel_content or srbPanel_content not found in the response for request with id #{id}, source_id #{source_id}, datum #{datum}."
+  end
+
+  response
 end
