@@ -178,7 +178,7 @@ puts "Downloading data for the following dates: #{dates_to_download.map { |d| d.
 
 if dates_to_download.empty? && !@reload
   puts "All data for the specified date range is already downloaded. Use '-r' to re-download.".red
-  exit 1
+  exit 0
 end
 
 # Extend timeout of Watir
