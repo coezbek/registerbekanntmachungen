@@ -10,7 +10,9 @@ This Ruby Gem provides a simple scraper for the "Registerbekanntmachungen" (noti
 
 These Registerbekanntmachungen only contain officially mandated publications such as those mandated by [Handelsgesetzbuch HGB §10](https://www.gesetze-im-internet.de/hgb/__10.html). It does not contain all changes in the corporate directory, only those that are required to be published (in particular declarations to delete i.e. 'Löschungen' and 'Umwandlungen'). 
 
-Since the data is static once published, small (only <= 200 announcements per day) and only the last 8 weeks are available at handelregister.de, this repository also hosts [daily snapshots](./db) of the data sorted by month in the `db` directory. In most cases, running the scraper yourself it thus unnecessary. 
+Since the data is static once published, small (only <= 200 announcements per day) and only the last 8 weeks are available at handelregister.de, this repository also hosts [daily snapshots](./db) of the data sorted by month in the `db` directory. In most cases, running the scraper yourself it thus unnecessary.
+
+You can view and search the data at [https://coezbek.github.io/registerbekanntmachungen](https://coezbek.github.io/registerbekanntmachungen).
 
 > [!IMPORTANT]
 > Handelsregister.de's Terms & Conditions mandates that users should not perform more than 60 'searches' or 'retrievals' per hour. Both terms are not defined it is thus not clear what constitutes either. It is unclear on what legal basis Handelsregister.de believes they have a right to impose such limits, since HGB makes no restrictions on an individuals ability to access these publically available information for the purpose of information. Since information on the handelsregister can be updated on a daily basis and there are no means of bulk 'retrievals', it could be argued that individuals must be able to perform as many accesses as are necessary to obtain all company information once per day. For the Registerbekanntmachungen this means on the order of 200 accesses per day per user.
