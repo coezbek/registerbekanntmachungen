@@ -179,15 +179,17 @@ def get_detailed_announcement(datum, id, source_id, view_state, cookies)
     http.open_timeout = 30
     http.read_timeout = 60
 
-    now = Time.now
+    timing = false
+
+    now = Time.now if timing
     request = Net::HTTP::Post.new(uri.request_uri, headers)
     request.set_form_data(post_data)
     response = http.request(request)
-    puts "  POST Took: #{Time.now - now} seconds" if @verbose
+    puts "  POST Took: #{Time.now - now} seconds" if timing
 
     if response.body =~ /redirect url="(.*?)">/
 
-      now = Time.now
+      now = Time.now if timing
       redirect_url = $1
       uri = URI("https://www.handelsregister.de" + redirect_url)
       headers = {
@@ -197,7 +199,7 @@ def get_detailed_announcement(datum, id, source_id, view_state, cookies)
       }
       request = Net::HTTP::Get.new(uri.request_uri, headers)
       response = http.request(request)
-      puts "  GET Took: #{Time.now - now} seconds" if @verbose
+      puts "  GET Took: #{Time.now - now} seconds" if timing
     end
 
     if !(response.body =~ /rrbPanel_content|srbPanel_content/)
