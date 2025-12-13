@@ -1,0 +1,86 @@
+{
+  "date": "2025-03-16",
+  "date_of_scrape": "2025-03-17T04:02:21.664Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 6,
+  "announcements": [
+    {
+      "date": "2025-03-16",
+      "id": "103901",
+      "original_text": "Löschungsankündigung\nSachsen-Anhalt Amtsgericht Stendal HRA 5439\nWM Technik Chemical Group UG (haftungsbeschränkt) & Co.KG – Magdeburg",
+      "type": "Löschungsankündigung",
+      "state": "Sachsen-Anhalt",
+      "amtsgericht": "Amtsgericht Stendal",
+      "registernummer": "HRA 5439",
+      "registerart": "HRA",
+      "company_name": "WM Technik Chemical Group UG (haftungsbeschränkt) & Co.KG",
+      "company_seat": "Magdeburg",
+      "details": ""
+    },
+    {
+      "date": "2025-03-16",
+      "id": "103902",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nMecklenburg-Vorpommern Amtsgericht Rostock HRB 12451\nSonnländer Bio Obst GmbH – Rostock",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Mecklenburg-Vorpommern",
+      "amtsgericht": "Amtsgericht Rostock",
+      "registernummer": "HRB 12451",
+      "registerart": "HRB",
+      "company_name": "Sonnländer Bio Obst GmbH",
+      "company_seat": "Rostock",
+      "details": ""
+    },
+    {
+      "date": "2025-03-16",
+      "id": "103903",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nMecklenburg-Vorpommern Amtsgericht Rostock HRB 3114\nObst - Gemüse - Vermarktungsgesellschaft mbH Evershagen – Rostock",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Mecklenburg-Vorpommern",
+      "amtsgericht": "Amtsgericht Rostock",
+      "registernummer": "HRB 3114",
+      "registerart": "HRB",
+      "company_name": "Obst - Gemüse - Vermarktungsgesellschaft mbH Evershagen",
+      "company_seat": "Rostock",
+      "details": ""
+    },
+    {
+      "date": "2025-03-16",
+      "id": "103904",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nMecklenburg-Vorpommern Amtsgericht Rostock HRB 8083\nSchweinemast Groß Bäbelin GmbH – Dobbin",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Mecklenburg-Vorpommern",
+      "amtsgericht": "Amtsgericht Rostock",
+      "registernummer": "HRB 8083",
+      "registerart": "HRB",
+      "company_name": "Schweinemast Groß Bäbelin GmbH",
+      "company_seat": "Dobbin",
+      "details": ""
+    },
+    {
+      "date": "2025-03-16",
+      "id": "103905",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nMecklenburg-Vorpommern Amtsgericht Rostock HRB 8835\nOevermann Agrar GmbH – Dobbin",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Mecklenburg-Vorpommern",
+      "amtsgericht": "Amtsgericht Rostock",
+      "registernummer": "HRB 8835",
+      "registerart": "HRB",
+      "company_name": "Oevermann Agrar GmbH",
+      "company_seat": "Dobbin",
+      "details": ""
+    },
+    {
+      "date": "2025-03-16",
+      "id": "103906",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nMecklenburg-Vorpommern Amtsgericht Rostock HRB 11934\nDATAGROUP Service Hub GmbH – Rostock",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Mecklenburg-Vorpommern",
+      "amtsgericht": "Amtsgericht Rostock",
+      "registernummer": "HRB 11934",
+      "registerart": "HRB",
+      "company_name": "DATAGROUP Service Hub GmbH",
+      "company_seat": "Rostock",
+      "details": ""
+    }
+  ]
+}
