@@ -1,0 +1,60 @@
+{
+  "date": "2025-03-22",
+  "date_of_scrape": "2025-03-23T04:02:07.764Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 4,
+  "announcements": [
+    {
+      "date": "2025-03-22",
+      "id": "104497",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Köln HRB 97989\nStock und Schwark Lashstyle & Beauty UG (haftungsbeschränkt) – Köln",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Köln",
+      "registernummer": "HRB 97989",
+      "registerart": "HRB",
+      "company_name": "Stock und Schwark Lashstyle & Beauty UG (haftungsbeschränkt)",
+      "company_seat": "Köln",
+      "details": ""
+    },
+    {
+      "date": "2025-03-22",
+      "id": "104498",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Köln HRB 41909\n\"H.St. Freund Transport GmbH\" – Kerpen",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Köln",
+      "registernummer": "HRB 41909",
+      "registerart": "HRB",
+      "company_name": "\"H.St. Freund Transport GmbH\"",
+      "company_seat": "Kerpen",
+      "details": ""
+    },
+    {
+      "date": "2025-03-22",
+      "id": "104499",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Köln HRB 83396\nH. St. Freund Transport GmbH – Kerpen",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Köln",
+      "registernummer": "HRB 83396",
+      "registerart": "HRB",
+      "company_name": "H. St. Freund Transport GmbH",
+      "company_seat": "Kerpen",
+      "details": ""
+    },
+    {
+      "date": "2025-03-22",
+      "id": "104500",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Köln HRB 99475\nMeurer Bau UG (haftungsbeschränkt) – Bergisch Gladbach",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Köln",
+      "registernummer": "HRB 99475",
+      "registerart": "HRB",
+      "company_name": "Meurer Bau UG (haftungsbeschränkt)",
+      "company_seat": "Bergisch Gladbach",
+      "details": ""
+    }
+  ]
+}
