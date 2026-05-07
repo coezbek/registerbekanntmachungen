@@ -1,0 +1,21 @@
+{
+  "date": "2026-02-08",
+  "date_of_scrape": "2026-02-09T04:43:30.080Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-02-08",
+      "id": "144608",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 21565\nIsoltra Transformatorenbau GmbH – Solingen",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Wuppertal",
+      "registernummer": "HRB 21565",
+      "registerart": "HRB",
+      "company_name": "Isoltra Transformatorenbau GmbH",
+      "company_seat": "Solingen",
+      "details": "08.02.2026 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 21565\nLöschungsankündigung\n\nIsoltra Transformatorenbau GmbH\nGesellschaft mit beschränkter Haftung\nSolingen\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf einen Monat festgesetzt."
+    }
+  ]
+}
