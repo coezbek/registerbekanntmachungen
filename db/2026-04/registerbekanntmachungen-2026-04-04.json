@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-04",
+  "date_of_scrape": "2026-04-05T04:51:39.219Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-04-04",
+      "id": "149824",
+      "original_text": "Sonstige Registerbekanntmachung\nHessen Amtsgericht Wiesbaden VR 7113\nUnabhängige Liste e.V. – Idstein",
+      "type": "Sonstige Registerbekanntmachung",
+      "state": "Hessen",
+      "amtsgericht": "Amtsgericht Wiesbaden",
+      "registernummer": "VR 7113",
+      "registerart": "VR",
+      "company_name": "Unabhängige Liste e.V.",
+      "company_seat": "Idstein",
+      "details": "04.04.2026 (Bekanntmachungsdatum)\n\nHessen Amtsgericht Wiesbaden VR 7113\nSonstige Registerbekanntmachung 03.04.2026 (Eintragungsdatum)\n\nUnabhängige Liste e.V.\neingetragener Verein\nIdstein\n\nDer Verein ist aufgelöst."
+    }
+  ]
+}
