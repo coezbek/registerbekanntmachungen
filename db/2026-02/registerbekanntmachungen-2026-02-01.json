@@ -1,0 +1,34 @@
+{
+  "date": "2026-02-01",
+  "date_of_scrape": "2026-02-02T04:42:14.793Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 2,
+  "announcements": [
+    {
+      "date": "2026-02-01",
+      "id": "144029",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 16246\nWalter Dämmer Werbegeschenke GmbH – Solingen",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Wuppertal",
+      "registernummer": "HRB 16246",
+      "registerart": "HRB",
+      "company_name": "Walter Dämmer Werbegeschenke GmbH",
+      "company_seat": "Solingen",
+      "details": "01.02.2026 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 16246\nLöschungsankündigung\n\nWalter Dämmer Werbegeschenke GmbH\nGesellschaft mit beschränkter Haftung\nSolingen\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf einen Monat festgesetzt."
+    },
+    {
+      "date": "2026-02-01",
+      "id": "144030",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 20015\nDDA Deutsche Dialogmarketing Akademie GmbH – Haan",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Wuppertal",
+      "registernummer": "HRB 20015",
+      "registerart": "HRB",
+      "company_name": "DDA Deutsche Dialogmarketing Akademie GmbH",
+      "company_seat": "Haan",
+      "details": "01.02.2026 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 20015\nLöschungsankündigung\n\nDDA Deutsche Dialogmarketing Akademie GmbH\nGesellschaft mit beschränkter Haftung\nHaan\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf einen Monat festgesetzt."
+    }
+  ]
+}
