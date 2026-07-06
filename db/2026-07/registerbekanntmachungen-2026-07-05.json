@@ -1,0 +1,21 @@
+{
+  "date": "2026-07-05",
+  "date_of_scrape": "2026-07-06T08:16:21.562Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-07-05",
+      "id": "159443",
+      "original_text": "Einreichung neuer Dokumente\nNordrhein-Westfalen Amtsgericht Bochum HRB 15614\nNovitia AG – Bochum",
+      "type": "Einreichung neuer Dokumente",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Bochum",
+      "registernummer": "HRB 15614",
+      "registerart": "HRB",
+      "company_name": "Novitia AG",
+      "company_seat": "Bochum",
+      "details": "05.07.2026 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Bochum HRB 15614\nEinreichung neuer Dokumente 05.07.2026 (Eintragungsdatum)\n\nNovitia AG\nAktiengesellschaft\nBochum\n\nDem Registergericht ist eine neue Liste der Mitglieder des Aufsichtsrates eingereicht worden."
+    }
+  ]
+}
