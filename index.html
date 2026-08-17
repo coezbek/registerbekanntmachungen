@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registerbekanntmachungen Suche</title>
+    <style>
+        :root {
+            --background-color: #f8f9fa;
+            --text-color: #212529;
+            --primary-color: #007bff;
+            --card-background: #ffffff;
+            --border-color: #dee2e6;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 1.75rem;
+        }
+        header .badges img {
+            margin: 0 0.25rem;
+        }
+        .disclaimer {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        .disclaimer strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .search-controls {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            background-color: var(--card-background);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        @media (min-width: 600px) {
+            .search-controls {
+                grid-template-columns: 2fr 1fr;
+                align-items: end;
+            }
+        }
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            font-family: inherit; /* Ensures date picker uses the same font */
+            line-height: inherit; /* Ensures consistent line height */
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            box-sizing: border-box; /* This is the key property */
+            height: calc(1.5rem + 1.5rem + 2px); /* Explicit height calculation: padding-top + padding-bottom + border-top + border-bottom */
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        #results-count {
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        .result {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: box-shadow 0.2s ease-in-out;
+        }
+        .result:hover {
+            box-shadow: 0 8px 12px rgba(0,0,0,0.08);
+        }
+        .result h3 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            color: var(--primary-color);
+        }
+        .result .meta {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+        .result details {
+            margin-top: 1rem;
+        }
+        .result summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f8f9fa;
+            padding: 1em;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            font-size: 0.9em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Registerbekanntmachungen</h1>
+            <p>Ein inoffizielles, durchsuchbares Archiv der deutschen Registerbekanntmachungen.</p>
+            <div class="badges">
+                <a href="https://github.com/coezbek/registerbekanntmachungen/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/coezbek/registerbekanntmachungen?style=social" alt="GitHub Stars"></a>
+                <a href="https://github.com/coezbek/registerbekanntmachungen/actions/workflows/daily_scrape.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/coezbek/registerbekanntmachungen/actions/workflows/daily_scrape.yml/badge.svg" alt="Daily Scrape CI"></a>
+            </div>
+        </header>
+
+        <main>
+            <section class="disclaimer">
+                <strong>Wichtiger Hinweis:</strong> Diese Seite ist kein Teil von <a href="https://www.handelsregister.de">handelsregister.de</a> und ist keine offizielle Quelle. Die hier angezeigten Daten können unvollständig oder veraltet sein. Benutzung auf eigene Gefahr. Die Originalquelle für Registerbekanntmachungen ist immer <a href="https://www.handelsregister.de/rp_web/welcome.xhtml" target="_blank" rel="noopener noreferrer">handelsregister.de</a>.
+            </section>
+
+            <section class="search-controls">
+                <div>
+                    <label for="search-input">Suche</label>
+                    <input type="text" id="search-input" placeholder="Name, HRB-Nummer, Stadt, etc." disabled>
+                </div>
+                <div>
+                    <label for="date-picker">Datum auswählen</label>
+                    <input type="date" id="date-picker" disabled>
+                </div>
+            </section>
+            
+            <p id="loading-status">Lade daten...</p>
+
+            <section class="results">
+                <div id="results-count"></div>
+                <div id="results-container"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                Quellcode auf <a href="https://github.com/coezbek/registerbekanntmachungen">github.com/coezbek/registerbekanntmachungen</a> | 
+                Daten Snapshot auf <a href="https://github.com/coezbek/registerbekanntmachungen/main/tree/db">Github</a> |
+                Originaldaten von <a href="https://www.handelsregister.de/rp_web/welcome.xhtml" target="_blank" rel="noopener noreferrer">handelsregister.de</a><br/>
+                Ein OpenData Projekt von <a href="https://oezbek-ventures.com">Christopher Özbek</a>.
+            </p>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="app.js"></script>
+</body>
+</html>

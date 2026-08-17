@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-12",
+  "date_of_scrape": "2026-04-13T05:05:02.184Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-04-12",
+      "id": "150348",
+      "original_text": "Einreichung neuer Dokumente\nBrandenburg Amtsgericht Cottbus HRB 9380\nFlughafen Berlin Brandenburg GmbH – Schönefeld",
+      "type": "Einreichung neuer Dokumente",
+      "state": "Brandenburg",
+      "amtsgericht": "Amtsgericht Cottbus",
+      "registernummer": "HRB 9380",
+      "registerart": "HRB",
+      "company_name": "Flughafen Berlin Brandenburg GmbH",
+      "company_seat": "Schönefeld",
+      "details": "12.04.2026 (Bekanntmachungsdatum)\n\nBrandenburg Amtsgericht Cottbus HRB 9380\nEinreichung neuer Dokumente\n\nFlughafen Berlin Brandenburg GmbH\nGesellschaft mit beschränkter Haftung\nSchönefeld\n\nAls nicht eingetragen wird veröffentlicht:\nDer Geschäftsführer hat eine Liste der Aufsichtsratsmitglieder gem. § 52 Abs. 2 Satz 2 GmbHG zum Handelsregister eingereicht"
+    }
+  ]
+}
