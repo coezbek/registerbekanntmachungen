@@ -1,0 +1,47 @@
+{
+  "date": "2025-12-26",
+  "date_of_scrape": "2025-12-27T04:12:27.742Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 3,
+  "announcements": [
+    {
+      "date": "2025-12-26",
+      "id": "141031",
+      "original_text": "Einreichung neuer Dokumente\nHessen Amtsgericht Frankfurt am Main HRB 55461\nLOGPAY Financial Services GmbH – Eschborn",
+      "type": "Einreichung neuer Dokumente",
+      "state": "Hessen",
+      "amtsgericht": "Amtsgericht Frankfurt am Main",
+      "registernummer": "HRB 55461",
+      "registerart": "HRB",
+      "company_name": "LOGPAY Financial Services GmbH",
+      "company_seat": "Eschborn",
+      "details": "26.12.2025 (Bekanntmachungsdatum)\n\nHessen Amtsgericht Frankfurt am Main HRB 55461\nEinreichung neuer Dokumente\n\nLOGPAY Financial Services GmbH\nGesellschaft mit beschränkter Haftung\nEschborn\n\nDurch eine Änderung in den Personen der Aufsichtsratsmitglieder ist eine Liste der Mitglieder des Aufsichtsrates zum Handelsregister eingereicht worden."
+    },
+    {
+      "date": "2025-12-26",
+      "id": "141032",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nHessen Amtsgericht Frankfurt am Main HRB 129751\nWindStar Commercial Expert GmbH – Frankfurt am Main",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Hessen",
+      "amtsgericht": "Amtsgericht Frankfurt am Main",
+      "registernummer": "HRB 129751",
+      "registerart": "HRB",
+      "company_name": "WindStar Commercial Expert GmbH",
+      "company_seat": "Frankfurt am Main",
+      "details": "26.12.2025 (Bekanntmachungsdatum)\n\nHessen Amtsgericht Frankfurt am Main HRB 129751\nRegisterbekanntmachung nach dem Umwandlungsgesetz 26.12.2025 (Eintragungsdatum)\n\nWindStar Commercial Expert GmbH\nGesellschaft mit beschränkter Haftung\nFrankfurt am Main\n\nDen Gläubigern der an der Verschmelzung beteiligten Rechtsträger ist, wenn sie binnen sechs Monaten nach dem Tag, an dem die Eintragung der Verschmelzung in das Register des Sitzes derjenigen Rechtsträger deren Gläubiger sie sind, nach § 19 Absatz 3 UmwG bekannt gemacht worden ist, ihren Anspruch nach Grund und Höhe schriftlich anmelden, Sicherheit zu leisten, soweit sie nicht Befriedigung verlangen können. Dieses Recht steht den Gläubigern jedoch nur zu, wenn sie glaubhaft machen, dass durch die Verschmelzung die Erfüllung ihrer Forderung gefährdet wird."
+    },
+    {
+      "date": "2025-12-26",
+      "id": "141033",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nHessen Amtsgericht Frankfurt am Main HRB 122740\nDISTRICON GmbH – Frankfurt am Main",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Hessen",
+      "amtsgericht": "Amtsgericht Frankfurt am Main",
+      "registernummer": "HRB 122740",
+      "registerart": "HRB",
+      "company_name": "DISTRICON GmbH",
+      "company_seat": "Frankfurt am Main",
+      "details": "26.12.2025 (Bekanntmachungsdatum)\n\nHessen Amtsgericht Frankfurt am Main HRB 122740\nRegisterbekanntmachung nach dem Umwandlungsgesetz 26.12.2025 (Eintragungsdatum)\n\nDISTRICON GmbH\nGesellschaft mit beschränkter Haftung\nFrankfurt am Main\n\nDen Gläubigern der an der Verschmelzung beteiligten Rechtsträger ist, wenn sie binnen sechs Monaten nach dem Tag, an dem die Eintragung der Verschmelzung in das Register des Sitzes derjenigen Rechtsträger deren Gläubiger sie sind, nach § 19 Absatz 3 UmwG bekannt gemacht worden ist, ihren Anspruch nach Grund und Höhe schriftlich anmelden, Sicherheit zu leisten, soweit sie nicht Befriedigung verlangen können. Dieses Recht steht den Gläubigern jedoch nur zu, wenn sie glaubhaft machen, dass durch die Verschmelzung die Erfüllung ihrer Forderung gefährdet wird."
+    }
+  ]
+}

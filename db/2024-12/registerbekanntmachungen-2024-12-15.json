@@ -1,0 +1,34 @@
+{
+  "date": "2024-12-15",
+  "date_of_scrape": "2024-12-16T04:01:58.037Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 2,
+  "announcements": [
+    {
+      "date": "2024-12-15",
+      "id": "96474",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNiedersachsen Amtsgericht Hannover VR 201187\nSTARKITA e.V. – Hannover",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Niedersachsen",
+      "amtsgericht": "Amtsgericht Hannover",
+      "registernummer": "VR 201187",
+      "registerart": "VR",
+      "company_name": "STARKITA e.V.",
+      "company_seat": "Hannover",
+      "details": "15.12.2024 (Bekanntmachungsdatum)\n\nNiedersachsen Amtsgericht Hannover VR 201187\nRegisterbekanntmachung nach dem Umwandlungsgesetz 15.12.2024 (Eintragungsdatum)\n\nSTARKITA e.V.\neingetragener Verein\nHannover\n\nDen Gläubigern der an der formwechselnden Umwandlung beteiligten Rechtsträger ist, wenn sie binnen sechs Monaten nach dem Tag, an dem die Eintragung der Umwandlung in das Register des Sitzes desjenigen Rechtsträgers, dessen Gläubiger sie sind, nach § 19 Abs. 3 UmwG als bekannt gemacht gilt, ihren Anspruch nach Grund und Höhe schriftlich anmelden, Sicherheit zu leisten, soweit sie nicht Befriedigung verlangen können. Dieses Recht steht den Gläubigern jedoch nur zu, wenn sie glaubhaft machen, dass durch die formwechselnde Umwandlung die Erfüllung der Forderung gefährdet wird."
+    },
+    {
+      "date": "2024-12-15",
+      "id": "96475",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Gütersloh HRB 11995\nKian Vertriebs GmbH – Gütersloh",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Gütersloh",
+      "registernummer": "HRB 11995",
+      "registerart": "HRB",
+      "company_name": "Kian Vertriebs GmbH",
+      "company_seat": "Gütersloh",
+      "details": "15.12.2024 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Gütersloh HRB 11995\nLöschungsankündigung 15.12.2024 (Eintragungsdatum)\n\nKian Vertriebs GmbH\nGesellschaft mit beschränkter Haftung\nGütersloh\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf zwei Monate festgesetzt."
+    }
+  ]
+}

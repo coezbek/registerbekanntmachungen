@@ -1,0 +1,21 @@
+{
+  "date": "2025-10-05",
+  "date_of_scrape": "2025-10-27T17:04:08.648Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-10-05",
+      "id": "132622",
+      "original_text": "Einreichung neuer Dokumente\nNiedersachsen Amtsgericht Göttingen HRB 200484\nDATAflor AG – Göttingen",
+      "type": "Einreichung neuer Dokumente",
+      "state": "Niedersachsen",
+      "amtsgericht": "Amtsgericht Göttingen",
+      "registernummer": "HRB 200484",
+      "registerart": "HRB",
+      "company_name": "DATAflor AG",
+      "company_seat": "Göttingen",
+      "details": "05.10.2025 (Bekanntmachungsdatum)\n\nNiedersachsen Amtsgericht Göttingen HRB 200484\nEinreichung neuer Dokumente\n\nDATAflor AG\nAktiengesellschaft\nGöttingen\n\nDie Liste der Mitglieder des Aufsichtsrats wurde beim Registergericht eingereicht."
+    }
+  ]
+}
