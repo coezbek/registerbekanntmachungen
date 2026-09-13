@@ -1,0 +1,21 @@
+{
+  "date": "2026-03-29",
+  "date_of_scrape": "2026-03-30T04:57:57.395Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-03-29",
+      "id": "149219",
+      "original_text": "Löschungsankündigung\nBrandenburg Amtsgericht Potsdam HRB 38015\nConfirmo 29 GmbH – Zossen",
+      "type": "Löschungsankündigung",
+      "state": "Brandenburg",
+      "amtsgericht": "Amtsgericht Potsdam",
+      "registernummer": "HRB 38015",
+      "registerart": "HRB",
+      "company_name": "Confirmo 29 GmbH",
+      "company_seat": "Zossen",
+      "details": "29.03.2026 (Bekanntmachungsdatum)\n\nBrandenburg Amtsgericht Potsdam HRB 38015\nLöschungsankündigung\n\nConfirmo 29 GmbH\nGesellschaft mit beschränkter Haftung\nZossen\n\nBei der nachstehenden Gesellschaft wird das Amtslöschungsverfahren gemäß § 394 FamFG eingeleitet."
+    }
+  ]
+}
