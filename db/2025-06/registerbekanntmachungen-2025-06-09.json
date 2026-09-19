@@ -1,0 +1,47 @@
+{
+  "date": "2025-06-09",
+  "date_of_scrape": "2025-06-13T08:30:01.256Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 3,
+  "announcements": [
+    {
+      "date": "2025-06-09",
+      "id": "111623",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nNordrhein-Westfalen Amtsgericht Köln HRB 48690\nMOPLAK Kommunale Aussenwerbung GmbH – Leverkusen",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Köln",
+      "registernummer": "HRB 48690",
+      "registerart": "HRB",
+      "company_name": "MOPLAK Kommunale Aussenwerbung GmbH",
+      "company_seat": "Leverkusen",
+      "details": "09.06.2025 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Köln HRB 48690\nRegisterbekanntmachung nach dem Umwandlungsgesetz 09.06.2025 (Eintragungsdatum)\n\nMOPLAK Kommunale Aussenwerbung GmbH\nGesellschaft mit beschränkter Haftung\nLeverkusen\n\nDen Gläubigern der an der Verschmelzung beteiligten Rechtsträger ist, wenn sie binnen sechs Monaten nach dem Tag, an dem die Eintragung der Verschmelzung in das Register des Sitzes derjenigen Rechtsträger deren Gläubiger sie sind, nach § 19 Absatz 3 UmwG als bekanntgemacht gilt, ihren Anspruch nach Grund und Höhe schriftlich anmelden, Sicherheit zu leisten, soweit sie nicht Befriedigung verlangen können. Dieses Recht steht den Gläubigern jedoch nur zu, wenn sie glaubhaft machen, dass durch die Verschmelzung die Erfüllung ihrer Forderung gefährdet wird."
+    },
+    {
+      "date": "2025-06-09",
+      "id": "111624",
+      "original_text": "Löschungsankündigung\nHessen Amtsgericht Frankfurt am Main HRB 115572\nY&N Gebäudeservice GmbH – Hattersheim am Main",
+      "type": "Löschungsankündigung",
+      "state": "Hessen",
+      "amtsgericht": "Amtsgericht Frankfurt am Main",
+      "registernummer": "HRB 115572",
+      "registerart": "HRB",
+      "company_name": "Y&N Gebäudeservice GmbH",
+      "company_seat": "Hattersheim am Main",
+      "details": "09.06.2025 (Bekanntmachungsdatum)\n\nHessen Amtsgericht Frankfurt am Main HRB 115572\nLöschungsankündigung 08.06.2025 (Eintragungsdatum)\n\nY&N Gebäudeservice GmbH\nGesellschaft mit beschränkter Haftung\nHattersheim am Main\n\nDas Registergericht beabsichtigt die im Handelsregister eingetragene Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs gegen die beabsichtigte Löschung wird auf 1 Monat festgesetzt."
+    },
+    {
+      "date": "2025-06-09",
+      "id": "111625",
+      "original_text": "Einreichung neuer Dokumente\nHessen Amtsgericht Frankfurt am Main HRB 29975\nDEHAG Hospitality Group AG – Eschborn",
+      "type": "Einreichung neuer Dokumente",
+      "state": "Hessen",
+      "amtsgericht": "Amtsgericht Frankfurt am Main",
+      "registernummer": "HRB 29975",
+      "registerart": "HRB",
+      "company_name": "DEHAG Hospitality Group AG",
+      "company_seat": "Eschborn",
+      "details": "09.06.2025 (Bekanntmachungsdatum)\n\nHessen Amtsgericht Frankfurt am Main HRB 29975\nEinreichung neuer Dokumente\n\nDEHAG Hospitality Group AG\nAktiengesellschaft\nEschborn\n\nDurch eine Änderung in den Personen der Aufsichtsratsmitglieder ist eine Liste der Mitglieder des Aufsichtsrates zum Handelsregister eingereicht worden."
+    }
+  ]
+}

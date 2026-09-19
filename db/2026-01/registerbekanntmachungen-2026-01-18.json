@@ -1,0 +1,21 @@
+{
+  "date": "2026-01-18",
+  "date_of_scrape": "2026-01-19T04:25:14.749Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-01-18",
+      "id": "142710",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 13075\nGÜNTER JAKOWSKI SCHWIMMBAD-SERVICE GMBH – Erkrath",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Wuppertal",
+      "registernummer": "HRB 13075",
+      "registerart": "HRB",
+      "company_name": "GÜNTER JAKOWSKI SCHWIMMBAD-SERVICE GMBH",
+      "company_seat": "Erkrath",
+      "details": "18.01.2026 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 13075\nLöschungsankündigung\n\nGÜNTER JAKOWSKI SCHWIMMBAD-SERVICE GMBH\nGesellschaft mit beschränkter Haftung\nErkrath\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf einen Monat festgesetzt."
+    }
+  ]
+}
