@@ -1,0 +1,21 @@
+{
+  "date": "2026-03-22",
+  "date_of_scrape": "2026-03-23T04:45:53.170Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-03-22",
+      "id": "148561",
+      "original_text": "Löschungsankündigung\nSachsen Amtsgericht Leipzig HRB 29122\nTML Production Service UG (haftungsbeschränkt) – Leipzig",
+      "type": "Löschungsankündigung",
+      "state": "Sachsen",
+      "amtsgericht": "Amtsgericht Leipzig",
+      "registernummer": "HRB 29122",
+      "registerart": "HRB",
+      "company_name": "TML Production Service UG (haftungsbeschränkt)",
+      "company_seat": "Leipzig",
+      "details": "22.03.2026 (Bekanntmachungsdatum)\n\nSachsen Amtsgericht Leipzig HRB 29122\nLöschungsankündigung 22.03.2026 (Eintragungsdatum)\n\nTML Production Service UG (haftungsbeschränkt)\nGesellschaft mit beschränkter Haftung\nLeipzig\n\nDas Registergericht beabsichtigt, die im Handelsregister eingetragene Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zu Erhebung eines Widerspruchs gegen die beabsichtigte Löschung wird auf einen Monat festgesetzt."
+    }
+  ]
+}

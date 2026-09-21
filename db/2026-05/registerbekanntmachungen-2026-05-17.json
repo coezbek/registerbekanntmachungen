@@ -1,0 +1,34 @@
+{
+  "date": "2026-05-17",
+  "date_of_scrape": "2026-05-18T05:24:39.778Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 2,
+  "announcements": [
+    {
+      "date": "2026-05-17",
+      "id": "153818",
+      "original_text": "Einreichung neuer Dokumente\nBrandenburg Amtsgericht Potsdam HRB 1575\nLAND BRANDENBURG LOTTO Gesellschaft mit beschränkter Haftung – Potsdam",
+      "type": "Einreichung neuer Dokumente",
+      "state": "Brandenburg",
+      "amtsgericht": "Amtsgericht Potsdam",
+      "registernummer": "HRB 1575",
+      "registerart": "HRB",
+      "company_name": "LAND BRANDENBURG LOTTO Gesellschaft mit beschränkter Haftung",
+      "company_seat": "Potsdam",
+      "details": "17.05.2026 (Bekanntmachungsdatum)\n\nBrandenburg Amtsgericht Potsdam HRB 1575\nEinreichung neuer Dokumente\n\nLAND BRANDENBURG LOTTO Gesellschaft mit beschränkter Haftung\nGesellschaft mit beschränkter Haftung\nPotsdam\n\nAls nicht eingetragen wird bekanntgemacht : Eine Liste der Mitglieder des Aufsichtsrates wurde zum Handelsregister eingereicht."
+    },
+    {
+      "date": "2026-05-17",
+      "id": "153819",
+      "original_text": "Löschungsankündigung\nRheinland-Pfalz Amtsgericht Mainz HRB 49752\nHI Presentation GmbH – Stadecken-Elsheim",
+      "type": "Löschungsankündigung",
+      "state": "Rheinland-Pfalz",
+      "amtsgericht": "Amtsgericht Mainz",
+      "registernummer": "HRB 49752",
+      "registerart": "HRB",
+      "company_name": "HI Presentation GmbH",
+      "company_seat": "Stadecken-Elsheim",
+      "details": "17.05.2026 (Bekanntmachungsdatum)\n\nRheinland-Pfalz Amtsgericht Mainz HRB 49752\nLöschungsankündigung\n\nHI Presentation GmbH\nGesellschaft mit beschränkter Haftung\nStadecken-Elsheim\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf einen Monat festgesetzt."
+    }
+  ]
+}

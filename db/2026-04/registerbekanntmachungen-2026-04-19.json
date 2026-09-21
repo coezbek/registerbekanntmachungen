@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-19",
+  "date_of_scrape": "2026-04-20T05:04:29.222Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-04-19",
+      "id": "151019",
+      "original_text": "Einreichung neuer Dokumente\nBaden-Württemberg Amtsgericht Stuttgart HRB 14000\nRobert Bosch Gesellschaft mit beschränkter Haftung – Stuttgart",
+      "type": "Einreichung neuer Dokumente",
+      "state": "Baden-Württemberg",
+      "amtsgericht": "Amtsgericht Stuttgart",
+      "registernummer": "HRB 14000",
+      "registerart": "HRB",
+      "company_name": "Robert Bosch Gesellschaft mit beschränkter Haftung",
+      "company_seat": "Stuttgart",
+      "details": "19.04.2026 (Bekanntmachungsdatum)\n\nBaden-Württemberg Amtsgericht Stuttgart HRB 14000\nEinreichung neuer Dokumente\n\nRobert Bosch Gesellschaft mit beschränkter Haftung\nGesellschaft mit beschränkter Haftung\nStuttgart\n\nDie Gesellschaft hat am 10.03.2026 die Liste über die Zusammensetzung des Aufsichtsrats zum Handelsregister eingereicht."
+    }
+  ]
+}
