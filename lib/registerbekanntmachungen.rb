@@ -213,7 +213,9 @@ browser.window.resize_to(1920, 1080) if @headless
 puts "Chrome: #{browser.driver.capabilities.browser_version}" if @verbose
 puts "Viewport: #{browser.window.size}" if @verbose
 
-begin
+# Opens the Registerbekanntmachungen search for the given dates and returns the
+# session data (ViewState, cookies, ...) needed for detail requests plus the result list
+def open_search(browser, dates_to_download)
 
   navigation_mode = :from_homepage # :direct 
 
@@ -278,16 +280,21 @@ begin
   # Wait for the results to load
   sleep 5 # Adjust as necessary
 
-  # Extract data from dl elements
+  # Extract data from dl elements into plain Ruby objects, so the browser can be
+  # navigated again (e.g. to re-open an expired session) without stale elements
+  results = []
   dl = browser.dl(id: 'bekanntMachungenForm:datalistId_list')
   if dl.exists?
-    dts = dl.dts
-    dds = dl.dds
-  else
-    dts = []
+    dds = dl.dds.to_a
+    dl.dts.each_with_index do |dt, index|
+      announcements = dds[index].as.map do |a|
+        { lines: a.label.text.strip.split("\n").map(&:strip), onclick: a.attribute_value('onclick') }
+      end
+      results << { date: Date.strptime(dt.text.strip, '%d.%m.%Y'), announcements: announcements } # Parse as German dates!
+    end
   end
 
-  if dts.empty?
+  if results.empty?
     puts "No announcements found for the specified date range."
   end
 
@@ -301,15 +308,20 @@ begin
   # Get cookies
   cookies = browser.cookies.to_a.map { |c| "#{c[:name]}=#{c[:value]}" }.join('; ')
 
+  { view_state: view_state, remote_bekanntmachung_id: remote_bekanntmachung_id, cookies: cookies, results: results }
+end
+
+begin
+
+  session = open_search(browser, dates_to_download)
+
   # Process the announcements grouped by date
   data_by_date = {}
 
-  dts.each_with_index do |dt, index|
-    date_text = dt.text.strip
-    date_obj = Date.strptime(date_text, '%d.%m.%Y') # Parse as German dates!
+  session[:results].each do |result|
+    date_obj = result[:date]
     date_text = date_obj.strftime('%Y-%m-%d') # ISO Dates please
-    dd = dds[index]
-    announcements = dd.as
+    announcements = result[:announcements]
     announcements_data = []
 
     # Skip dates that are already cached unless reloading
@@ -330,10 +342,8 @@ begin
     announcements.each_with_index do |a, index|
 
       puts "Processing announcement ##{index + 1} of ##{announcements.size} for date #{date_text}..." if @verbose
-      label = a.label
-      onclick = a.attribute_value('onclick')
-      text = label.text.strip
-      lines = text.split("\n").map(&:strip)
+      lines = a[:lines]
+      onclick = a[:onclick]
 
       announcement = parse_announcement(lines, onclick)
 
@@ -354,7 +364,6 @@ begin
         
       else
 
-        onclick = a.attribute_value('onclick')
         if onclick =~ /fireBekanntmachung\d+\('([^']+)',\s*'([^']+)'\)/
           datum = Regexp.last_match(1)
           id = Regexp.last_match(2)
@@ -363,7 +372,7 @@ begin
           sleep @delay
 
           # Make the POST request
-          response_body = get_detailed_announcement(datum, id, remote_bekanntmachung_id, view_state, cookies)
+          response_body = get_detailed_announcement(datum, id, session[:remote_bekanntmachung_id], session[:view_state], session[:cookies])
   
           # Parse the announcement
           announcement_text = parse_announcement_response(response_body)
