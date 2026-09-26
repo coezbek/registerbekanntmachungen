@@ -145,6 +145,28 @@ def parse_announcement(lines, onclick)
 
 end
 
+# Network errors which are worth retrying (the portal sporadically resets or drops connections)
+TRANSIENT_NETWORK_ERRORS = [
+  Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED,
+  Errno::EHOSTUNREACH, OpenSSL::SSL::SSLError, EOFError, SocketError
+].freeze
+
+# Performs the request, retrying transient network errors with exponential backoff (10s, 20s, 40s, ...)
+def request_with_retry(http, request, attempts: 6)
+  attempt = 0
+  begin
+    attempt += 1
+    http.request(request)
+  rescue *TRANSIENT_NETWORK_ERRORS => e
+    raise if attempt >= attempts
+    wait = 10 * 2**(attempt - 1)
+    puts "Network error #{e.class}: #{e.message}, retrying in #{wait}s (attempt #{attempt} of #{attempts})..."
+    http.finish if http.started?
+    sleep wait
+    retry
+  end
+end
+
 def get_detailed_announcement(datum, id, source_id, view_state, cookies)
   uri = URI('https://www.handelsregister.de/rp_web/bekanntmachungen/welcome.xhtml')
 
@@ -181,7 +203,7 @@ def get_detailed_announcement(datum, id, source_id, view_state, cookies)
     now = Time.now if timing
     request = Net::HTTP::Post.new(uri.request_uri, headers)
     request.set_form_data(post_data)
-    response = http.request(request).body
+    response = request_with_retry(http, request).body
     puts "  POST Took: #{Time.now - now} seconds" if timing
 
     if response =~ /<redirect url="\/rp_web\/error\/bug\.xhtml">/
@@ -213,7 +235,7 @@ def get_detailed_announcement(datum, id, source_id, view_state, cookies)
 
       now = Time.now if timing
       request = Net::HTTP::Get.new(uri.request_uri, headers)
-      response = http.request(request).body
+      response = request_with_retry(http, request).body
       puts "  GET Took: #{Time.now - now} seconds" if timing
       
       if response.strip == '' || response =~ /<title>Registerportal \| Error/
