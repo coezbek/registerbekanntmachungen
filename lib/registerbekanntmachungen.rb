@@ -44,6 +44,20 @@ def file_name(date)
   "db/#{date.strftime('%Y-%m')}/registerbekanntmachungen-#{date.strftime('%Y-%m-%d')}.json"
 end
 
+def save_data(date_obj, data)
+  filename = file_name(date_obj)
+  if @no_save
+    puts "Data for date #{data[:date]} not saved to file (no-save option enabled)." if @verbose
+    puts JSON.pretty_generate(data)
+  else
+    FileUtils.mkdir_p(File.dirname(filename))
+    File.open(filename, 'w') do |f|
+      f.write(JSON.pretty_generate(data))
+    end
+    puts "Found #{data[:announcements].size} announcements for date #{data[:date]} and saved to #{filename}" if @verbose
+  end
+end
+
 # Set up OptionParser
 opts = OptionParser.new do |opts|
   opts.banner = 'Usage: registerbekanntmachungen [options]'
@@ -409,6 +423,8 @@ begin
       number_of_announcements: announcements_data.size,
       announcements: announcements_data.sort_by { |a| a[:id] }
     }
+    # Save each date right away, so a later failure doesn't lose it
+    save_data(date_obj, data_by_date[date_obj])
     dates_downloaded += 1
   end
 
@@ -423,22 +439,8 @@ begin
       number_of_announcements: 0,
       announcements: []
     }
+    save_data(date_obj, data_by_date[date_obj])
     dates_downloaded += 1
-  end
-
-  # Save data per date
-  data_by_date.each do |date_obj, data|
-    filename = "db/#{date_obj.strftime('%Y-%m')}/registerbekanntmachungen-#{date_obj.strftime('%Y-%m-%d')}.json"
-    if @no_save
-      puts "Data for date #{data[:date]} not saved to file (no-save option enabled)." if @verbose
-      puts JSON.pretty_generate(data)
-    else
-      FileUtils.mkdir_p(File.dirname(filename))
-      File.open(filename, 'w') do |f|
-        f.write(JSON.pretty_generate(data))
-      end
-      puts "Found #{data[:announcements].size} announcements for date #{data[:date]} and saved to #{filename}" if @verbose
-    end
   end
 
   # Output statistics
