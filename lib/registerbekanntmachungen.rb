@@ -23,6 +23,7 @@ return if $0 != __FILE__
 @headless = true # Default to headless mode
 @oldest_mode = false
 @merge = false
+@delay = 1.5 # Seconds to wait between detail requests to avoid being throttled
 
 # Add this method to determine the oldest unsaved date in the last 8 weeks
 def oldest_unsaved_date
@@ -83,6 +84,10 @@ opts = OptionParser.new do |opts|
 
   opts.on('-m', '--merge', 'Merge new data with existing data') do
     @merge = true
+  end
+
+  opts.on('--delay SECONDS', Float, "Seconds to wait between detail requests (default: #{@delay})") do |delay|
+    @delay = delay
   end
 
   opts.on('--no-headless', 'Don\'t run browser in headless mode') do
@@ -354,6 +359,9 @@ begin
           datum = Regexp.last_match(1)
           id = Regexp.last_match(2)
           
+          # Be polite, the portal throttles/blocks clients sending requests back to back
+          sleep @delay
+
           # Make the POST request
           response_body = get_detailed_announcement(datum, id, remote_bekanntmachung_id, view_state, cookies)
   
