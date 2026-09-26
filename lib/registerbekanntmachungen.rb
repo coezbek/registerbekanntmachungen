@@ -371,8 +371,18 @@ begin
           # Be polite, the portal throttles/blocks clients sending requests back to back
           sleep @delay
 
-          # Make the POST request
-          response_body = get_detailed_announcement(datum, id, session[:remote_bekanntmachung_id], session[:view_state], session[:cookies])
+          # Make the POST request, re-opening the search if the session got lost
+          session_attempts = 0
+          begin
+            response_body = get_detailed_announcement(datum, id, session[:remote_bekanntmachung_id], session[:view_state], session[:cookies])
+          rescue SessionLostError => e
+            session_attempts += 1
+            raise if session_attempts > 3
+            puts "Session lost (#{e.message[0, 100]}...), re-opening the search in 30s (attempt #{session_attempts} of 3)...".yellow
+            sleep 30
+            session = open_search(browser, dates_to_download)
+            retry
+          end
   
           # Parse the announcement
           announcement_text = parse_announcement_response(response_body)

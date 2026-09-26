@@ -145,6 +145,10 @@ def parse_announcement(lines, onclick)
 
 end
 
+# Raised when the portal no longer answers detail requests with announcement content,
+# e.g. because the JSF session/ViewState expired. Recoverable by re-opening the search.
+class SessionLostError < StandardError; end
+
 # Network errors which are worth retrying (the portal sporadically resets or drops connections)
 TRANSIENT_NETWORK_ERRORS = [
   Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED,
@@ -255,7 +259,7 @@ def get_detailed_announcement(datum, id, source_id, view_state, cookies)
 
   if !(response =~ /rrbPanel_content|srbPanel_content/)
     puts "Response: " + response.to_s[0..5000].gsub("\n", '    ')
-    raise "Necessary divs with rrbPanel_content or srbPanel_content not found in the response for request with id #{id}, source_id #{source_id}, datum #{datum}."
+    raise SessionLostError, "Necessary divs with rrbPanel_content or srbPanel_content not found in the response for request with id #{id}, source_id #{source_id}, datum #{datum}."
   end
 
   response
