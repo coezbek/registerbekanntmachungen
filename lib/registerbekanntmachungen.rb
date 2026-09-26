@@ -429,7 +429,7 @@ begin
   end
 
   # Add dates with no announcements to the data
-  dates_without_announcements = date_range - data_by_date.keys
+  dates_without_announcements = dates_to_download - data_by_date.keys
   dates_without_announcements.each do |date_obj|
     date_text = date_obj.strftime('%Y-%m-%d')
     data_by_date[date_obj] = {
