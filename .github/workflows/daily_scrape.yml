@@ -55,6 +55,8 @@ jobs:
           git add db/
           if ! git diff --cached --quiet; then
             git commit -m "Automated update: Scraper results for $(date -d 'yesterday' +%Y-%m-%d)"
+            # main may have moved during the (throttled, long) scrape, e.g. by a backfill
+            git pull --rebase
             git push
           else
             echo "No changes to commit."
