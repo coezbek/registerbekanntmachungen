@@ -1,0 +1,21 @@
+{
+  "date": "2026-08-09",
+  "date_of_scrape": "2026-08-10T04:32:24.990Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-08-09",
+      "id": "165281",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nSachsen Amtsgericht Dresden HRB 42030\nProcondes GmbH – Dresden",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Sachsen",
+      "amtsgericht": "Amtsgericht Dresden",
+      "registernummer": "HRB 42030",
+      "registerart": "HRB",
+      "company_name": "Procondes GmbH",
+      "company_seat": "Dresden",
+      "details": "09.08.2026 (Bekanntmachungsdatum)\n\nSachsen Amtsgericht Dresden HRB 42030\nRegisterbekanntmachung nach dem Umwandlungsgesetz 09.08.2026 (Eintragungsdatum)\n\nProcondes GmbH\nGesellschaft mit beschränkter Haftung\nDresden\n\nDen Gläubigern der an der Verschmelzung beteiligten Rechtsträger ist, wenn sie binnen sechs Monaten nach dem Tag, an dem die Eintragung der Verschmelzung in das Register des Sitzes desjenigen Rechtsträgers, dessen Gläubiger sie sind, nach § 19 Abs. 3 UmwG als bekannt gemacht gilt, ihren Anspruch nach Grund und Höhe in Textform anmelden, Sicherheit zu leisten, soweit sie nicht Befriedigung verlangen können. Dieses Recht steht den Gläubigern jedoch nur zu, wenn sie glaubhaft machen, dass durch die Verschmelzung die Erfüllung der Forderung gefährdet wird."
+    }
+  ]
+}

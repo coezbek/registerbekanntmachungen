@@ -1,0 +1,47 @@
+{
+  "date": "2026-05-25",
+  "date_of_scrape": "2026-05-26T05:22:16.772Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 3,
+  "announcements": [
+    {
+      "date": "2026-05-25",
+      "id": "154623",
+      "original_text": "Einreichung neuer Dokumente\nHessen Amtsgericht Frankfurt am Main HRB 114845\nTvarit GmbH – Frankfurt am Main",
+      "type": "Einreichung neuer Dokumente",
+      "state": "Hessen",
+      "amtsgericht": "Amtsgericht Frankfurt am Main",
+      "registernummer": "HRB 114845",
+      "registerart": "HRB",
+      "company_name": "Tvarit GmbH",
+      "company_seat": "Frankfurt am Main",
+      "details": "25.05.2026 (Bekanntmachungsdatum)\n\nHessen Amtsgericht Frankfurt am Main HRB 114845\nEinreichung neuer Dokumente 23.05.2026 (Eintragungsdatum)\n\nTvarit GmbH\nGesellschaft mit beschränkter Haftung\nFrankfurt am Main\n\nDurch Änderungen in den Personen der Beiratsmitglieder sind neue Listen der Mitglieder des Beirates zum Handelsregister eingereicht worden."
+    },
+    {
+      "date": "2026-05-25",
+      "id": "154624",
+      "original_text": "Löschungsankündigung\nHessen Amtsgericht Frankfurt am Main HRB 121361\nACIUM Deutschland GmbH – Frankfurt am Main",
+      "type": "Löschungsankündigung",
+      "state": "Hessen",
+      "amtsgericht": "Amtsgericht Frankfurt am Main",
+      "registernummer": "HRB 121361",
+      "registerart": "HRB",
+      "company_name": "ACIUM Deutschland GmbH",
+      "company_seat": "Frankfurt am Main",
+      "details": "25.05.2026 (Bekanntmachungsdatum)\n\nHessen Amtsgericht Frankfurt am Main HRB 121361\nLöschungsankündigung\n\nACIUM Deutschland GmbH\nGesellschaft mit beschränkter Haftung\nFrankfurt am Main\n\nDas Registergericht beabsichtigt die im Handelsregister eingetragene Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs gegen die beabsichtigte Löschung wird auf 3 Monate festgesetzt."
+    },
+    {
+      "date": "2026-05-25",
+      "id": "154625",
+      "original_text": "Einreichung neuer Dokumente\nHessen Amtsgericht Frankfurt am Main HRB 76752\nAUMOVIO Engineering Solutions GmbH – Frankfurt am Main",
+      "type": "Einreichung neuer Dokumente",
+      "state": "Hessen",
+      "amtsgericht": "Amtsgericht Frankfurt am Main",
+      "registernummer": "HRB 76752",
+      "registerart": "HRB",
+      "company_name": "AUMOVIO Engineering Solutions GmbH",
+      "company_seat": "Frankfurt am Main",
+      "details": "25.05.2026 (Bekanntmachungsdatum)\n\nHessen Amtsgericht Frankfurt am Main HRB 76752\nEinreichung neuer Dokumente 25.05.2026 (Eintragungsdatum)\n\nAUMOVIO Engineering Solutions GmbH\nGesellschaft mit beschränkter Haftung\nFrankfurt am Main\n\nDurch eine Änderung in den Personen der Aufsichtsratsmitglieder ist eine Liste der Mitglieder des Aufsichtsrates zum Handelsregister eingereicht worden."
+    }
+  ]
+}
