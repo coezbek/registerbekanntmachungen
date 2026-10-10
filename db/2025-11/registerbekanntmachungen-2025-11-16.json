@@ -1,0 +1,21 @@
+{
+  "date": "2025-11-16",
+  "date_of_scrape": "2025-11-17T04:08:35.664Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-11-16",
+      "id": "137442",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Gütersloh HRB 12434\nCJ Ventures UG (haftungsbeschränkt) – Gütersloh",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Gütersloh",
+      "registernummer": "HRB 12434",
+      "registerart": "HRB",
+      "company_name": "CJ Ventures UG (haftungsbeschränkt)",
+      "company_seat": "Gütersloh",
+      "details": "16.11.2025 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Gütersloh HRB 12434\nLöschungsankündigung 16.11.2025 (Eintragungsdatum)\n\nCJ Ventures UG (haftungsbeschränkt)\nGesellschaft mit beschränkter Haftung\nGütersloh\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf einen Monat festgesetzt."
+    }
+  ]
+}

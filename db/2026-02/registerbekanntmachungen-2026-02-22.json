@@ -1,0 +1,21 @@
+{
+  "date": "2026-02-22",
+  "date_of_scrape": "2026-02-23T04:42:16.457Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-02-22",
+      "id": "145822",
+      "original_text": "Einreichung neuer Dokumente\nNordrhein-Westfalen Amtsgericht Münster HRB 17592\nandsafe Aktiengesellschaft – Münster",
+      "type": "Einreichung neuer Dokumente",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Münster",
+      "registernummer": "HRB 17592",
+      "registerart": "HRB",
+      "company_name": "andsafe Aktiengesellschaft",
+      "company_seat": "Münster",
+      "details": "22.02.2026 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Münster HRB 17592\nEinreichung neuer Dokumente\n\nandsafe Aktiengesellschaft\nAktiengesellschaft\nMünster\n\nDem Registergericht ist eine neue Liste der Mitglieder des Aufsichtsrates eingereicht worden."
+    }
+  ]
+}
