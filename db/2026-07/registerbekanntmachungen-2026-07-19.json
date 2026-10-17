@@ -1,0 +1,21 @@
+{
+  "date": "2026-07-19",
+  "date_of_scrape": "2026-07-20T06:42:08.426Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-07-19",
+      "id": "161515",
+      "original_text": "Sonstige Registerbekanntmachung\nNiedersachsen Amtsgericht Hannover HRB 218757\nKindler & Fries Hannover III GmbH – Hannover",
+      "type": "Sonstige Registerbekanntmachung",
+      "state": "Niedersachsen",
+      "amtsgericht": "Amtsgericht Hannover",
+      "registernummer": "HRB 218757",
+      "registerart": "HRB",
+      "company_name": "Kindler & Fries Hannover III GmbH",
+      "company_seat": "Hannover",
+      "details": "19.07.2026 (Bekanntmachungsdatum)\n\nNiedersachsen Amtsgericht Hannover HRB 218757\nSonstige Registerbekanntmachung 19.07.2026 (Eintragungsdatum)\n\nKindler & Fries Hannover III GmbH\nGesellschaft mit beschränkter Haftung\nHannover\n\nDen Gläubigern der Gesellschaft, deren Forderungen begründet worden sind, bevor die Eintragung der Beendigung des Vertrages in das Handelsregister nach § 10 HGB als bekanntgemacht gilt, ist vom anderen Vertragsteil Sicherheit zu leisten, wenn sie sich binnen sechs Monaten nach der Bekanntmachung zu diesem Zweck bei ihm melden."
+    }
+  ]
+}
