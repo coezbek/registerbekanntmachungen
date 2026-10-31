@@ -1,0 +1,21 @@
+{
+  "date": "2026-01-25",
+  "date_of_scrape": "2026-01-26T04:27:30.565Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-01-25",
+      "id": "143391",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Gütersloh HRB 2204\n\"HOAG\" H.W. Hollmann Aktiengesellschaft – Gütersloh",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Gütersloh",
+      "registernummer": "HRB 2204",
+      "registerart": "HRB",
+      "company_name": "\"HOAG\" H.W. Hollmann Aktiengesellschaft",
+      "company_seat": "Gütersloh",
+      "details": "25.01.2026 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Gütersloh HRB 2204\nLöschungsankündigung 25.01.2026 (Eintragungsdatum)\n\n\"HOAG\" H.W. Hollmann Aktiengesellschaft\nAktiengesellschaft\nGütersloh\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf einen Monat festgesetzt."
+    }
+  ]
+}
