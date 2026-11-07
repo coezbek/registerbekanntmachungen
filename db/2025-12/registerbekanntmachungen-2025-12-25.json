@@ -1,0 +1,21 @@
+{
+  "date": "2025-12-25",
+  "date_of_scrape": "2025-12-26T04:15:15.525Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-12-25",
+      "id": "141030",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Kleve HRB 15965\nIncirlik handmade carpet shop GmbH – Moers",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Kleve",
+      "registernummer": "HRB 15965",
+      "registerart": "HRB",
+      "company_name": "Incirlik handmade carpet shop GmbH",
+      "company_seat": "Moers",
+      "details": "25.12.2025 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Kleve HRB 15965\nLöschungsankündigung\n\nIncirlik handmade carpet shop GmbH\nGesellschaft mit beschränkter Haftung\nMoers\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf einen Monat festgesetzt."
+    }
+  ]
+}

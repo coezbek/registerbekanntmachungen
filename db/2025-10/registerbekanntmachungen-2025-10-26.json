@@ -1,0 +1,34 @@
+{
+  "date": "2025-10-26",
+  "date_of_scrape": "2025-10-27T04:11:10.424Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 2,
+  "announcements": [
+    {
+      "date": "2025-10-26",
+      "id": "135314",
+      "original_text": "Registerbekanntmachung nach dem Umwandlungsgesetz\nHamburg Amtsgericht Hamburg HRB 73183\nECO Documentaries GmbH – Hamburg",
+      "type": "Registerbekanntmachung nach dem Umwandlungsgesetz",
+      "state": "Hamburg",
+      "amtsgericht": "Amtsgericht Hamburg",
+      "registernummer": "HRB 73183",
+      "registerart": "HRB",
+      "company_name": "ECO Documentaries GmbH",
+      "company_seat": "Hamburg",
+      "details": "26.10.2025 (Bekanntmachungsdatum)\n\nHamburg Amtsgericht Hamburg HRB 73183\nRegisterbekanntmachung nach dem Umwandlungsgesetz 26.10.2025 (Eintragungsdatum)\n\nECO Documentaries GmbH\nGesellschaft mit beschränkter Haftung\nHamburg\n\nAls nicht eingetragen wird bekannt gemacht:\nDen Gläubigern der an der Verschmelzung beteiligten Gesellschaften ist, wenn sie binnen sechs Monaten nach dem Tag, an dem die Eintragung der Verschmelzung in das Register des Sitzes desjenigen Rechtsträgers, dessen Gläubiger sie sind, nach § 19 Absatz 3 UmwG als bekannt gemacht gilt, ihren Anspruch nach Grund und Höhe schriftlich anmelden, Sicherheit zu leisten, soweit sie nicht Befriedigung verlangen können. Dieses Recht steht den Gläubigern jedoch nur zu, wenn sie glaubhaft machen, dass durch die Verschmelzung die Erfüllung ihrer Forderung gefährdet wird."
+    },
+    {
+      "date": "2025-10-26",
+      "id": "135315",
+      "original_text": "Löschungsankündigung\nNiedersachsen Amtsgericht Hildesheim HRB 202130\nFAP Unternehmergesellschaft (haftungsbeschränkt) – Burgdorf",
+      "type": "Löschungsankündigung",
+      "state": "Niedersachsen",
+      "amtsgericht": "Amtsgericht Hildesheim",
+      "registernummer": "HRB 202130",
+      "registerart": "HRB",
+      "company_name": "FAP Unternehmergesellschaft (haftungsbeschränkt)",
+      "company_seat": "Burgdorf",
+      "details": "26.10.2025 (Bekanntmachungsdatum)\n\nNiedersachsen Amtsgericht Hildesheim HRB 202130\nLöschungsankündigung\n\nFAP Unternehmergesellschaft (haftungsbeschränkt)\nGesellschaft mit beschränkter Haftung\nBurgdorf\n\nDas Registergericht beabsichtigt, die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf 1 Monat ab dieser Registerbekanntmachung festgesetzt."
+    }
+  ]
+}

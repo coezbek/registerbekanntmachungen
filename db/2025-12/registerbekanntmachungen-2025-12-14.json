@@ -1,0 +1,21 @@
+{
+  "date": "2025-12-14",
+  "date_of_scrape": "2025-12-15T04:19:52.391Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-12-14",
+      "id": "139922",
+      "original_text": "Sonstige Registerbekanntmachung\nNordrhein-Westfalen Amtsgericht Düsseldorf HRB 111132\nZentiva AG – Monheim am Rhein",
+      "type": "Sonstige Registerbekanntmachung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Düsseldorf",
+      "registernummer": "HRB 111132",
+      "registerart": "HRB",
+      "company_name": "Zentiva AG",
+      "company_seat": "Monheim am Rhein",
+      "details": "14.12.2025 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Düsseldorf HRB 111132\nSonstige Registerbekanntmachung\n\nZentiva AG\nAktiengesellschaft\nMonheim am Rhein\n\nDem Registergericht ist eine Liste der Mitglieder des Aufsichtsrates eingereicht worden."
+    }
+  ]
+}
