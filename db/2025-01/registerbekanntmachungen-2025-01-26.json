@@ -1,0 +1,34 @@
+{
+  "date": "2025-01-26",
+  "date_of_scrape": "2025-02-11T09:00:18.567Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 2,
+  "announcements": [
+    {
+      "date": "2025-01-26",
+      "id": "99590",
+      "original_text": "Löschungsankündigung\nSachsen Amtsgericht Leipzig HRB 32500\nGourmet Palast Leipzig GmbH – Leipzig",
+      "type": "Löschungsankündigung",
+      "state": "Sachsen",
+      "amtsgericht": "Amtsgericht Leipzig",
+      "registernummer": "HRB 32500",
+      "registerart": "HRB",
+      "company_name": "Gourmet Palast Leipzig GmbH",
+      "company_seat": "Leipzig",
+      "details": "26.01.2025 (Bekanntmachungsdatum)\n\nSachsen Amtsgericht Leipzig HRB 32500\nLöschungsankündigung\n\nGourmet Palast Leipzig GmbH\nGesellschaft mit beschränkter Haftung\nLeipzig\n\nDas Registergericht beabsichtigt, die im Handelsregister eingetragene Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zu Erhebung eines Widerspruchs gegen die beabsichtigte Löschung wird auf einen Monat festgesetzt."
+    },
+    {
+      "date": "2025-01-26",
+      "id": "99591",
+      "original_text": "Löschungsankündigung\nSachsen Amtsgericht Leipzig HRB 38488\nDiscounthaus UG (haftungsbeschränkt) – Leipzig",
+      "type": "Löschungsankündigung",
+      "state": "Sachsen",
+      "amtsgericht": "Amtsgericht Leipzig",
+      "registernummer": "HRB 38488",
+      "registerart": "HRB",
+      "company_name": "Discounthaus UG (haftungsbeschränkt)",
+      "company_seat": "Leipzig",
+      "details": "26.01.2025 (Bekanntmachungsdatum)\n\nSachsen Amtsgericht Leipzig HRB 38488\nLöschungsankündigung\n\nDiscounthaus UG (haftungsbeschränkt)\nGesellschaft mit beschränkter Haftung\nLeipzig\n\nDas Registergericht beabsichtigt, die im Handelsregister eingetragene Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zu Erhebung eines Widerspruchs gegen die beabsichtigte Löschung wird auf einen Monat festgesetzt."
+    }
+  ]
+}
