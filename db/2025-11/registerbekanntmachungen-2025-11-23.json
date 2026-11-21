@@ -1,0 +1,21 @@
+{
+  "date": "2025-11-23",
+  "date_of_scrape": "2025-11-24T04:14:23.918Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-11-23",
+      "id": "138076",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 13804\nOrthopädie-Technik Böge GmbH – Haan",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Wuppertal",
+      "registernummer": "HRB 13804",
+      "registerart": "HRB",
+      "company_name": "Orthopädie-Technik Böge GmbH",
+      "company_seat": "Haan",
+      "details": "23.11.2025 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Wuppertal HRB 13804\nLöschungsankündigung\n\nOrthopädie-Technik Böge GmbH\nGesellschaft mit beschränkter Haftung\nHaan\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf #DV.Fr(Text=\"Bitte wählen Sie die Widerspruchsfrist aus!\",Eingabe=\"einen Monat\",\"zwei Monate\",\"drei Monate\",\"#insert(Text=\"Freitext\")\"|\"freier Text\") festgesetzt."
+    }
+  ]
+}

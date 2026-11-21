@@ -1,0 +1,21 @@
+{
+  "date": "2025-02-02",
+  "date_of_scrape": "2025-02-03T04:01:59.028Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2025-02-02",
+      "id": "100259",
+      "original_text": "Sonstige Registerbekanntmachung\nMecklenburg-Vorpommern Amtsgericht Rostock HRB 11377\nDIM Industrieservice Nord GmbH – Rostock",
+      "type": "Sonstige Registerbekanntmachung",
+      "state": "Mecklenburg-Vorpommern",
+      "amtsgericht": "Amtsgericht Rostock",
+      "registernummer": "HRB 11377",
+      "registerart": "HRB",
+      "company_name": "DIM Industrieservice Nord GmbH",
+      "company_seat": "Rostock",
+      "details": "02.02.2025 (Bekanntmachungsdatum)\n\nMecklenburg-Vorpommern Amtsgericht Rostock HRB 11377\nSonstige Registerbekanntmachung 02.02.2025 (Eintragungsdatum)\n\nDIM Industrieservice Nord GmbH\nGesellschaft mit beschränkter Haftung\nRostock\n\nDen Gläubigern der Gesellschaft, deren Forderungen begründet worden sind, bevor die Eintragung der Beendigung des Vertrages in das Handelsregister nach § 10 des Handelsgesetzbuches als bekanntgemacht gilt, hat der andere Vertragsteil Sicherheit zu leisten, wenn sie sich binnen sechs Monaten nach der Bekanntmachung der Eintragung zu diesem Zweck bei ihm melden."
+    }
+  ]
+}
