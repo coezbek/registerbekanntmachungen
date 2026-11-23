@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-22",
+  "date_of_scrape": "2026-11-23T13:59:19.539Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 1,
+  "announcements": [
+    {
+      "date": "2026-11-22",
+      "id": "185217",
+      "original_text": "Löschungsankündigung\nNiedersachsen Amtsgericht Lüneburg VR 120350\nTourismusverein Elbtalaue Dannenberg e.V. – Dannenberg",
+      "type": "Löschungsankündigung",
+      "state": "Niedersachsen",
+      "amtsgericht": "Amtsgericht Lüneburg",
+      "registernummer": "VR 120350",
+      "registerart": "VR",
+      "company_name": "Tourismusverein Elbtalaue Dannenberg e.V.",
+      "company_seat": "Dannenberg",
+      "details": "22.11.2026 (Bekanntmachungsdatum)\n\nNiedersachsen Amtsgericht Lüneburg VR 120350\nLöschungsankündigung\n\nTourismusverein Elbtalaue Dannenberg e.V.\neingetragener Verein\nDannenberg\n\nDas Registergericht beabsichtigt, den Verein von Amts wegen nach § 395 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf 1 Monat ab dieser Registerbekanntmachung festgesetzt."
+    }
+  ]
+}
