@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-08",
+  "date_of_scrape": "2026-11-09T12:28:15.215Z",
+  "tool_version": "0.2.0",
+  "number_of_announcements": 2,
+  "announcements": [
+    {
+      "date": "2026-11-08",
+      "id": "183755",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Essen HRB 32143\nSDM Immobilien GmbH – Essen",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Essen",
+      "registernummer": "HRB 32143",
+      "registerart": "HRB",
+      "company_name": "SDM Immobilien GmbH",
+      "company_seat": "Essen",
+      "details": "08.11.2026 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Essen HRB 32143\nLöschungsankündigung 08.11.2026 (Eintragungsdatum)\n\nSDM Immobilien GmbH\nGesellschaft mit beschränkter Haftung\nEssen\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf einen Monat festgesetzt."
+    },
+    {
+      "date": "2026-11-08",
+      "id": "183756",
+      "original_text": "Löschungsankündigung\nNordrhein-Westfalen Amtsgericht Essen HRB 36842\nLG Logistics UG (haftungsbeschränkt) – Essen",
+      "type": "Löschungsankündigung",
+      "state": "Nordrhein-Westfalen",
+      "amtsgericht": "Amtsgericht Essen",
+      "registernummer": "HRB 36842",
+      "registerart": "HRB",
+      "company_name": "LG Logistics UG (haftungsbeschränkt)",
+      "company_seat": "Essen",
+      "details": "08.11.2026 (Bekanntmachungsdatum)\n\nNordrhein-Westfalen Amtsgericht Essen HRB 36842\nLöschungsankündigung 08.11.2026 (Eintragungsdatum)\n\nLG Logistics UG (haftungsbeschränkt)\nGesellschaft mit beschränkter Haftung\nEssen\n\nDas Registergericht beabsichtigt die Gesellschaft von Amts wegen nach § 394 FamFG zu löschen. Die Frist zur Erhebung eines Widerspruchs ist auf einen Monat festgesetzt."
+    }
+  ]
+}
